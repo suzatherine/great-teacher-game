@@ -7,7 +7,7 @@ The Great Teacher Game
 	"ifid": "18306B07-ADEC-4E25-B97E-EC322318D1F4",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
-	"start": "TGTG-28",
+	"start": "TGTG-23",
 	"zoom": 1
 }
 
@@ -439,8 +439,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 THE GREAT TEACHER GAME
 
-A game FOR teachers, 
-to play with their class
+A game FOR teachers, to play with their class
 
 <<button "START">>
   <<goto "TGTG-2">>
@@ -460,11 +459,7 @@ You decide the fate of your teacher.​
 Without you the teacher is not a teacher…​
 They are just a regular human being with lots of pens!
 
-<<timed 14s>><<goto "TGTG-3">><</timed>>
-
-<<button ">">>
-  <<goto "TGTG-3">>
-<</button>>
+<<timed 15s>><<goto "TGTG-3">><</timed>>
 
 
 </main>
@@ -484,14 +479,10 @@ Complete the challenges and the teacher will feel fab. ​
 If you fail, they may need a strawberry trifle with lots of cream on top. 
 </main>
 
-<<button ">">>
-  <<goto "TGTG-4">>
-<</button>>
-
-<<timed 16s>><<goto "TGTG-4">><</timed>>
+<<timed 17s>><<goto "TGTG-4">><</timed>>
 
 
-:: StoryInit {"position":"0,100","size":"100,100"}
+:: StoryInit {"position":"100,100","size":"100,100"}
 <<cacheaudio "Game1" "https://www.dropbox.com/s/pehmvas54kvpf1l/Game1.mp3?dl=1">>
 <<cacheaudio "Game2" "https://www.dropbox.com/s/9qvjymz58adefbh/Game2.mp3?dl=1">>
 
@@ -550,9 +541,6 @@ Let's win this game. ​
 Let’s play The Great Teacher Game.
 ​
 </main>
-<<button ">">>
-  <<goto "TGTG-5">>
-<</button>>
 
 <<timed 11s>><<goto "TGTG-5">><</timed>>
 
@@ -561,10 +549,8 @@ Let’s play The Great Teacher Game.
 <<audio "Game3" stop>>
 <<audio "Game4" play>>
 <<audio "underscore2" volume 0.05 loop play>>
-
-
 <main>
-HOW DO YOU FEEL NOW!?
+<h1>HOW DO YOU FEEL NOW!?</h1>
 
 TEACHER, THE FIRST QUESTION IS FOR YOU. ​
 
@@ -576,9 +562,9 @@ BETWEEN 1-100. ​
 
 1 being the LOWEST you have every felt in your life.
 
-</main>
-
 <<button "NEXT">><<goto "TGTG-6">><</button>>
+
+</main>
 
 
 :: TGTG-6 {"position":"300,725","size":"100,100"}
@@ -592,9 +578,10 @@ We have 5 rounds. ​
 In 5 rounds we will find out. ​
 
 Does the number go up or down?
-</main>
 
 <<button "NEXT">><<goto "TGTG-7">><</button>>
+
+</main>
 
 
 :: TGTG-7 {"position":"300,850","size":"100,100"}
@@ -602,13 +589,10 @@ Does the number go up or down?
 <<audio "titleUnderscore" volume 0.05 fadeout>>
 
 <main>
-ROUND 1 - 
-TEACHER YOU ARE SO FUNNY
-</main>
-
-<<button ">">><<goto "TGTG-8">><</button>>
+ROUND 1 -  TEACHER YOU ARE SO FUNNY
 
 <<timed 5s>><<goto "TGTG-8">><</timed>>
+</main>
 
 
 :: TGTG-9 {"position":"300,1100","size":"100,100"}
@@ -618,9 +602,9 @@ TEACHER YOU ARE SO FUNNY
 Do you want to have a try first...? ​
 We'll do a fake laugh in 3-2-1 
 
-</main>
-<<button ">">><<goto "TGTG-10">><</button>>
 <<timed 10s>><<goto "TGTG-10">><</timed>>
+
+</main>
 
 
 :: TGTG-8 {"position":"300,975","size":"100,100"}
@@ -632,12 +616,11 @@ Even if they are really really really really not funny. ​
 So, to win this game you need to do that. ​
 You just need to laugh. ​
 Teacher, you get to tell your best joke and students you just need to do a fake laugh. ​
-Like this 
-
-</main>
-<<button ">">><<goto "TGTG-9">><</button>>
+Like this:
 
 <<timed 28s>><<goto "TGTG-9">><</timed>>
+
+</main>
 
 
 :: TGTG-10 {"position":"300,1225","size":"100,100"}
@@ -646,9 +629,9 @@ Like this
 Ok...here we go. ​
 Teacher when you are ready for your joke – GO!​
 Teacher, if you feel they were believable at laughing at your joke, then click complete. 
-</main>
 
 <<button "COMPLETE">><<goto "TGTG-11">><</button>>
+</main>
 
 
 :: TGTG-11 {"position":"300,1350","size":"100,100"}
@@ -658,7 +641,6 @@ Teacher, if you feel they were believable at laughing at your joke, then click c
 ROUND 2 - COMPLIMENT BINGO​
 </main>
 
-<<button ">">><<goto "TGTG-12">><</button>>
 <<timed 5s>><<goto "TGTG-12">><</timed>>
 
 
@@ -678,11 +660,10 @@ Put your hand up and if the compliment is on the list then we can tick it off. �
 
 They have to be real compliments though! ​
 
-Teacher, when you have line shout BINGO and click it too!​
-</main>
-
-
+Teacher, when you have line shout BINGO and click it too!
+​
 <<button "BINGO">><<goto "TGTG-13">><</button>>
+</main>
 
 
 :: TGTG-13 {"position":"300,1600","size":"100,100"}
@@ -692,7 +673,7 @@ Teacher, when you have line shout BINGO and click it too!​
 ROUND 3 - 10 SUCCESSES
 </main>
 
-<<button ">">><<goto "TGTG-14">><</button>>
+
 
 <<timed 5s>><<goto "TGTG-14">><</timed>>
 
@@ -703,8 +684,6 @@ ROUND 3 - 10 SUCCESSES
 <main>
 The target of a teacher is to help you learn. They spend all day at it!
 </main>
-
-<<button ">">><<goto "TGTG-15">><</button>>
 
 <<timed 5s>><<goto "TGTG-15">><</timed>>
 
@@ -718,7 +697,6 @@ They may help you learn how to spell, your times table, what makes you smile, th
 When they hear what you’ve learnt it charges them up. ​
 </main>
 
-<<button ">">><<goto "TGTG-16">><</button>>
 <<timed 21s>><<goto "TGTG-16">><</timed>>
 
 
@@ -736,7 +714,7 @@ Thanks to the teacher. ​
 
 Can you get all 10? ​
 
-Oh…did we not mention You have 60 seconds to complete this. Click Go to start the clock.​
+Oh…did we not mention You have 60 seconds to complete this? Click Go to start the clock.​
 <<button "GO">><<goto "TGTG-17">><</button>>
 </main>
 
@@ -765,8 +743,11 @@ Oh…did we not mention You have 60 seconds to complete this. Click Go to start 
 <<audio ":all" stop>><<audio "Round3.5" play>>
 <main>
 Did you get 10?
+
 <<button "YES">><<goto "TGTG-19">><</button>>
+
 <<button "CLOSE">><<goto "TGTG-19">><</button>>
+
 </main>
 
 
@@ -834,7 +815,7 @@ SONG 3:
 
 <main>
 TIDY!
-<div class="countdown"></div>
+<div class="countdown">120</div>
 
 <<set $seconds to 120>>
 	<<repeat 1s>>
@@ -847,8 +828,6 @@ TIDY!
 			<<stop>>
 		<</if>>
 	<</repeat>>
-
-    <<button "NEXT">><<goto "TGTG-23">><</button>>
     
 </main>
 
@@ -880,7 +859,6 @@ It is pure joy. ​
 
 Now is that moment. 
 
-<<button "NEXT">><<goto "TGTG-25">><</button>>
 </main>
 
 <<timed 14s>><<goto "TGTG-25">><</timed>>
@@ -889,6 +867,8 @@ Now is that moment.
 :: TGTG-25 {"position":"300,3100","size":"100,100"}
 <<audio ":all" stop>><<audio "round5.3" play>>
 
+<main>
+
 Teacher, I need you to be in the front of the class looking angry, annoyed or mean! ​
 
 Only the teacher can choose who will speak to them. ​
@@ -896,6 +876,8 @@ Only the teacher can choose who will speak to them. ​
 Students, you have 90 seconds to turn that frown upside down with your best joke
 
 <<button "GO">><<goto "TGTG-26">><</button>>
+
+</main>
 
 
 :: TGTG-26 {"position":"300,3225","size":"100,100"}
@@ -922,11 +904,11 @@ Students, you have 90 seconds to turn that frown upside down with your best joke
 
 :: TGTG-27 {"position":"300,3350","size":"100,100"}
 <<audio ":all" stop>><<audio "HDYF2" play>>
-
+<<audio "underscore2" volume 0.05 loop play>>
 
 <main>
 
-HOW DO THEY FEEL NOW?
+<h1>HOW DO THEY FEEL NOW?</h1>
 
 TEACHER, THE LAST QUESTION IS FOR YOU. ​
 
@@ -944,7 +926,7 @@ BETWEEN 1-100. ​
 
 
 :: TGTG-28 {"position":"300,3475","size":"100,100"}
-<<audio ":all" stop>><<audio "HDYF3" play>>
+<<audio "HDYF2" stop>><<audio "HDYF3" play>>
 
 <main>
 
@@ -957,21 +939,24 @@ Did the number go up or down?
 
 :: TGTG-29A {"position":"225,3600","size":"100,100"}
 <<audio ":all" stop>><<audio "fanfare" play>>
+<<audio "underscore1" volume 0.05 loop play>>
+
 <main>CONGRATULATIONS!</main>
 
 <<timed 5s>><<goto TGTG-30>><</timed>>
 
 
 :: TGTG-29B {"position":"375,3600","size":"100,100"}
+<<audio ":all" stop>><<audio "underscore1" volume 0.05 loop play>>
 <main>OH NO - BETTER TRY AGAIN!</main>
 
 
 :: TGTG-30 {"position":"300,3725","size":"100,100"}
-<<audio ":all" stop>><<audio "Reward" play>>
+<<audio "Reward" play>>
 <<audio "underscore1" volume 0.02 loop play>>
 
 <main>
-REWARD
+<h1>REWARD</h1>
 
 Teachers like when you are smiling​
 
