@@ -7,7 +7,7 @@ The Great Teacher Game
 	"ifid": "18306B07-ADEC-4E25-B97E-EC322318D1F4",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
-	"start": "TGTG-22",
+	"start": "TGTG-28",
 	"zoom": 1
 }
 
@@ -848,7 +848,7 @@ TIDY!
 		<</if>>
 	<</repeat>>
 
-    <<button "NEXT">><<goto "TGTG-21">><</button>>
+    <<button "NEXT">><<goto "TGTG-23">><</button>>
     
 </main>
 
@@ -879,6 +879,7 @@ And make them laugh,​
 It is pure joy. ​
 
 Now is that moment. 
+
 <<button "NEXT">><<goto "TGTG-25">><</button>>
 </main>
 
@@ -898,7 +899,7 @@ Students, you have 90 seconds to turn that frown upside down with your best joke
 
 
 :: TGTG-26 {"position":"300,3225","size":"100,100"}
-<<audio ":all" stop>><<audio "round5.3" play>>
+<<audio ":all" stop>>
 
 <main>
 <div class="countdown"></div>
@@ -967,7 +968,7 @@ Did the number go up or down?
 
 :: TGTG-30 {"position":"300,3725","size":"100,100"}
 <<audio ":all" stop>><<audio "Reward" play>>
-<<audio "underscore1" volume 0.05 loop play>>
+<<audio "underscore1" volume 0.02 loop play>>
 
 <main>
 REWARD
