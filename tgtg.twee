@@ -1,0 +1,997 @@
+:: StoryTitle
+The Great Teacher Game
+
+
+:: StoryData
+{
+	"ifid": "18306B07-ADEC-4E25-B97E-EC322318D1F4",
+	"format": "SugarCube",
+	"format-version": "2.36.1",
+	"start": "TGTG-22",
+	"zoom": 1
+}
+
+
+:: Story Stylesheet [stylesheet]
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
+
+/* GENERICS */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* Mostly equivalates to 10px but allows users accessibility zoom settings to work*/
+  /* font-size: 10px; */
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-size: 10px;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Try to keep your margins going in one direction to avoid margin collapase or grounding. I switch all the top margins off to avoid this issue. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+blockquote,
+address,
+article,
+aside,
+details,
+dialogue,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+header,
+hr,
+main,
+nav,
+pre,
+section,
+table,
+p {
+  margin-top: 0;
+  margin-block-start: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  /* You MUST make sure that links stand out from nomal text though...*/
+}
+
+
+img {
+  /* This means that it can be less than 100% of the width of its parent IF the image is INTRINSICALLY smaller */
+  max-width: 100%;
+
+  height: auto;
+  /* 'auto' is the initial value for height BUT for images (and other elements which have an intrinic height) that is not the case. To make an image responsive you set one dimension (usually width) to [max-]width: 100%; and the other to 'auto' to ensure it keeps aspect ratio. 'auto' basically tells the browser to decide. */
+  vertical-align: middle;
+  /* minor vertical centering. Works for images IF there is a baseline (i.e. they are displayed inline or inline-block) */
+}
+
+/* Because we us <ul>s for lists that we don't always want bulletted. */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* To make actual bulletted lists */
+ul.typographic {
+  list-style: initial;
+  padding-inline-start: 20px;
+}
+
+/* stops icons being the target of JS click events */
+a.btn *,
+button * {
+  pointer-events: null;
+}
+
+/* For 'accessibility text'. If your button only has an image inside it that isn't good for accessibility. Put a span inside there and give it this class and put some descriptive text for what the button does into the span. */
+
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+  -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  clip-path: auto;
+  -webkit-clip-path: auto;
+  white-space: normal;
+}
+
+/* GET RID OF TWINE STYLES */
+#story{
+  margin:0
+}
+
+#passages {
+	max-width: 100%;
+
+}
+
+#story a.link-external:after {
+	content: "";
+}
+
+button{
+    background-color: transparent;
+    border: #fff 1px solid;
+    border-radius: 3px;
+}
+
+button:hover{
+	background-color:#ea9e25;
+	border: #fff 1px solid;
+	color: #fff;
+}
+
+a {
+  color:#ea9e25;;
+}
+
+a:active {
+  background-color: #ea9e25;;
+}
+
+a:hover {
+  color: #fff;
+}
+
+#story a.link-external:after {
+	content: "";
+}
+
+#story {
+	margin: 0
+}
+
+/* GENERAL STYLES */
+body{
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: "Space Grotesk";
+  color:#fff;
+  /* color:#000; */
+  overflow:scroll;
+  background:#188081;
+  /* padding: 1.5rem */
+  display:flex;
+  flex-direction: column
+}
+
+header{
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+    padding: 2rem
+}
+main{
+   padding: 2rem;
+   margin-block-end: 10rem
+}
+
+input[type=text]{
+  border: 1px solid #fff
+}
+/* FOOTER  */
+
+footer{
+   display:flex;
+  justify-content: space-between;
+align-items: end;
+  position:fixed;
+  bottom: 0;
+  padding: 2rem;
+  width: 100%;
+background: #188081;
+}
+
+nav{
+  display:flex;
+    justify-content: space-between;
+}
+
+.nav-wrapper{
+display:flex;
+  flex-direction:column;
+align-items: flex-start
+}
+
+.nav-wrapper:last-child{
+align-items: flex-end
+}
+
+.nav-item{
+  margin-block-end: 0.5rem;
+  width:100%;
+  display:flex
+}
+
+.nav-item.replay, .nav-item.end{
+justify-content: center
+}
+.nav-item.replay, .nav-item.forward{
+justify-content: end
+}
+
+.nav-item.replay, .nav-item.back{
+justify-content: start
+}
+
+.nav-item.forward > button, 
+.nav-item.back > button{
+  font-size:2rem
+}
+footer > button:first-child,  {
+  font-size:2rem
+}
+
+.nav-item > button{
+ font-size: 1.3rem
+}
+
+.menu-wrapper{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu-wrapper > button{
+margin-inline-end: 10px;
+margin-block-end: 10px
+}
+
+
+textarea{
+  min-width: 60vw
+}
+
+.wordcontainer{
+  display:flex;
+  flex-direction: row;
+}
+
+.letter-item > input[type=text]{
+    min-width: 2em;
+  	max-width: 2em;
+  	margin-inline-end:10px;
+}
+
+.letter-item > .correct-letter{
+  min-width: 2em;
+  	max-width: 2em;
+  	margin-inline-end:10px;
+}
+
+
+
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+/* MAP */
+	.map{
+width: 100%;
+    height: 60vh;
+    border: 0;
+    margin: auto;
+    }
+
+
+.directions-card {
+    display: none!important
+}
+
+@media screen and (min-width: 450px) {
+.map{
+	max-width:60vw;
+	height:50vh;
+	border:0
+}
+}
+
+/* SPECIFICS */
+
+.dropdown-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.wrong {
+  color:#f6cbc0;
+}
+
+.question{
+  border: 1px solid #fff;
+    padding: 10px;
+}
+
+input[type=text], select{
+  border: 1px solid #fff
+}
+
+input[type=text]{
+  min-width: 60%
+}
+
+h2.title{
+  font-size:2.5rem
+}
+
+
+:: Story JavaScript [script]
+$('#ui-bar').remove();
+$(document.head).find('#style-ui-bar').remove();
+// TYPEWRITER FN
+!function() {
+    postrender.typewriter = function (b) {
+        if (this.tags) {
+            var r = new RegExp("t8n.typewriter.([0-9]+)(?:[^0-9]|$)","g");
+            var t = r.exec(this.tags.toString());
+            if (t) {
+                typeout(b, t[1]+0);
+            }
+        }
+        return b;
+    };
+    var typeout = function(c,t) {
+        var Furl = function(current) {
+            this.n = current;
+            this.out = false;
+            this.data = current.nodeValue;
+            current.nodeValue = "";
+            this.kids = [];
+            var cn = current.childNodes;
+            if (current.style && current.style.display=="none") {
+                return;
+            }
+            while (cn.length>0) {
+                var f = new Furl(cn[0]);
+                current.removeChild(cn[0]);
+                f.out = true;this.kids.push(f);
+            }
+        };
+        var nodes = new Furl(c);
+        var unfurl = function(furled,d) {
+            var n = furled.n;
+            if (furled.out) {
+                d.appendChild(n);
+                furled.out = false;
+            }
+            if (furled.data) {
+                n.nodeValue += furled.data[0];
+                furled.data = furled.data.slice(1);
+                return true;
+            }
+            for (var j=0; j<furled.kids.length; j++) {
+                var ret = unfurl(furled.kids[j],n);
+                if (ret) {
+                    return true;
+                }
+            }
+            return false;
+        };
+        var title = passage();
+        var intr = setInterval (
+            function() {
+                if (passage() == title && unfurl(nodes,null)) {
+                    return;
+                }
+                clearInterval(intr);
+            }
+        ,t);
+    };
+}();
+
+
+:: TGTG-1 {"position":"300,100","size":"100,100"}
+<main>
+
+THE GREAT TEACHER GAME
+
+A game FOR teachers, 
+to play with their class
+
+<<button "START">>
+  <<goto "TGTG-2">>
+<</button>>
+
+</main>
+
+
+:: TGTG-2 {"position":"300,225","size":"100,100"}
+<<audio ":all" stop>><<audio "Game1" play>>
+<<audio "underscore1" volume 0.05 loop play>>
+<main>
+
+Welcome to the Great Teacher Game. ​
+Class you are needed.​
+You decide the fate of your teacher.​
+Without you the teacher is not a teacher…​
+They are just a regular human being with lots of pens!
+
+<<timed 14s>><<goto "TGTG-3">><</timed>>
+
+<<button ">">>
+  <<goto "TGTG-3">>
+<</button>>
+
+
+</main>
+
+
+:: TGTG-3 {"position":"300,350","size":"100,100"}
+<<audio "Game1" stop>>
+<<audio "Game2" play>>
+
+
+<main>
+Today you are needed to help your teacher​
+Your actions will decide something very important today. ​
+Your actions will decide...​
+How your teacher FEEEEEEEEEELS!​
+Complete the challenges and the teacher will feel fab. ​
+If you fail, they may need a strawberry trifle with lots of cream on top. 
+</main>
+
+<<button ">">>
+  <<goto "TGTG-4">>
+<</button>>
+
+<<timed 16s>><<goto "TGTG-4">><</timed>>
+
+
+:: StoryInit {"position":"0,100","size":"100,100"}
+<<cacheaudio "Game1" "https://www.dropbox.com/s/pehmvas54kvpf1l/Game1.mp3?dl=1">>
+<<cacheaudio "Game2" "https://www.dropbox.com/s/9qvjymz58adefbh/Game2.mp3?dl=1">>
+
+<<cacheaudio "Game3" "https://www.dropbox.com/s/2h7xr7bb4h1aawe/Game3.mp3?dl=1">>
+<<cacheaudio "Game4" "https://www.dropbox.com/s/zqmr94otxnd7mnx/Game4.mp3?dl=1">>
+<<cacheaudio "Game5" "https://www.dropbox.com/s/uxz7dd66zw9vwzz/Game5.mp3?dl=1">>
+<<cacheaudio "HDYF2" "https://www.dropbox.com/s/l3i3ytwuhzwiutl/HDYF2.mp3?dl=1">>
+<<cacheaudio "HDYF3" "https://www.dropbox.com/s/vaqff0twvpkztiy/HDYF3.mp3?dl=1">>
+
+<<cacheaudio "Reward" "https://www.dropbox.com/s/bc8g2lrvbp4j910/Reward.mp3?dl=1" >>
+<<cacheaudio "Round1.1" "https://www.dropbox.com/s/7r32hyh2u0yqoba/Round1.1.mp3?dl=1" >>
+<<cacheaudio "Round1.2" "https://www.dropbox.com/s/ol312c53z9037by/Round1.2.mp3?dl=1" >>
+<<cacheaudio "Round1.3" "https://www.dropbox.com/s/del1liq0stshxvg/Round1.3.mp3?dl=1" >>
+<<cacheaudio "Round1.4" "https://www.dropbox.com/s/wnxydzcep0qal4t/Round1.4.mp3?dl=1" >>
+<<cacheaudio "Round1.5" "https://www.dropbox.com/s/9bafvltsp4dnp1e/Round1.5.mp3?dl=1" >>
+<<cacheaudio "Round2.1" "https://www.dropbox.com/s/dffemmtkenupno5/Round2.1.mp3?dl=1" >>
+<<cacheaudio "Round2.2" "https://www.dropbox.com/s/auxmgu60gy41wj0/Round2.2.mp3?dl=1" >>
+<<cacheaudio "Round3.1" "https://www.dropbox.com/s/hs679nxbaggbnzq/Round3.1.mp3?dl=1" >>
+<<cacheaudio "Round3.2" "https://www.dropbox.com/s/cukt7qd1n0cd7ga/Round3.2.mp3?dl=1" >>
+<<cacheaudio "Round3.3" "https://www.dropbox.com/s/0y5ryftaun0j9q3/Round3.3.mp3?dl=1" >>
+<<cacheaudio "Round3.4" "https://www.dropbox.com/s/mfivukvotdct2wy/Round3.4.mp3?dl=1" >>
+<<cacheaudio "Round3.5" "https://www.dropbox.com/s/ohybpkqtmgqzjy8/Round3.5.mp3?dl=1" >>
+
+<<cacheaudio "round4.1" "https://www.dropbox.com/s/c1z8mvp7kqxugdx/round4.1.mp3?dl=1" >>
+<<cacheaudio "round4.2" "https://www.dropbox.com/s/i1j5mxuroocusle/round4.2.mp3?dl=1" >>
+<<cacheaudio "round4.3" "https://www.dropbox.com/s/wl88ksnos6rgim7/round4.3.mp3?dl=1" >>
+<<cacheaudio "round4" "https://www.dropbox.com/s/duy594ptvipsuvg/round4.mp3?dl=1" >>
+
+<<cacheaudio "round5.1" "https://www.dropbox.com/s/qxfsd020n0x7y95/round5.1.mp3?dl=1" >>
+<<cacheaudio "round5.2" "https://www.dropbox.com/s/6gtvgc8pc4fhsro/round5.2.mp3?dl=1" >>
+<<cacheaudio "round5.3" "https://www.dropbox.com/s/q86jh0n7nrw31g2/round5.3.mp3?dl=1" >>
+<<cacheaudio "underscore1" "https://www.dropbox.com/s/ruln2cdpcw6ayeu/underscore%201.mp3?dl=1" >>
+<<cacheaudio "underscore2" "https://www.dropbox.com/s/qecki3vo6ly9ird/underscore%202.mp3?dl=1" >>
+
+<<cacheaudio "titleUnderscore" "https://www.dropbox.com/s/4sozah6p6bpo5d3/titleUnderscore.mp3?dl=1" >>
+
+<<cacheaudio "alarm" "https://www.dropbox.com/s/wtz3b9u9egcsfy8/alarm.mp3?dl=1" >>
+
+<<cacheaudio "fanfare" "https://www.dropbox.com/s/u4pa1hyev4k0ic5/fanfare.mp3?dl=1" >>
+
+
+
+
+<<waitforaudio>>
+
+
+:: TGTG-4 {"position":"300,475","size":"100,100"}
+<<audio "Game2" stop>>
+<<audio "underscore1" stop>>
+<<audio "Game3" play>>
+<<audio "underscore1" volume 0.05 fadeoverto 10 0>>
+
+<main>
+So, let's do this class. ​
+Let's win this game. ​
+Let’s play The Great Teacher Game.
+​
+</main>
+<<button ">">>
+  <<goto "TGTG-5">>
+<</button>>
+
+<<timed 11s>><<goto "TGTG-5">><</timed>>
+
+
+:: TGTG-5 {"position":"300,600","size":"100,100"}
+<<audio "Game3" stop>>
+<<audio "Game4" play>>
+<<audio "underscore2" volume 0.05 loop play>>
+
+
+<main>
+HOW DO YOU FEEL NOW!?
+
+TEACHER, THE FIRST QUESTION IS FOR YOU. ​
+
+HOW ARE YOU RIGHT NOW? ​
+
+BETWEEN 1-100. ​
+
+100 being the MOST incredible you have ever felt in your life ​
+
+1 being the LOWEST you have every felt in your life.
+
+</main>
+
+<<button "NEXT">><<goto "TGTG-6">><</button>>
+
+
+:: TGTG-6 {"position":"300,725","size":"100,100"}
+<<audio "Game4" stop>><<audio "Game5" play>>
+
+<main>
+GOOD – now we know what number they are – we can see if we can change that number – can we make that number go up! ​
+
+We have 5 rounds. ​
+
+In 5 rounds we will find out. ​
+
+Does the number go up or down?
+</main>
+
+<<button "NEXT">><<goto "TGTG-7">><</button>>
+
+
+:: TGTG-7 {"position":"300,850","size":"100,100"}
+<<audio ":all" stop>><<audio "Round1.1" play>>
+<<audio "titleUnderscore" volume 0.05 fadeout>>
+
+<main>
+ROUND 1 - 
+TEACHER YOU ARE SO FUNNY
+</main>
+
+<<button ">">><<goto "TGTG-8">><</button>>
+
+<<timed 5s>><<goto "TGTG-8">><</timed>>
+
+
+:: TGTG-9 {"position":"300,1100","size":"100,100"}
+<<audio ":all" stop>><<audio "Round1.3" play>>
+
+<main>
+Do you want to have a try first...? ​
+We'll do a fake laugh in 3-2-1 
+
+</main>
+<<button ">">><<goto "TGTG-10">><</button>>
+<<timed 10s>><<goto "TGTG-10">><</timed>>
+
+
+:: TGTG-8 {"position":"300,975","size":"100,100"}
+<<audio ":all" stop>><<audio "Round1.2" play>>
+
+<main>
+Most teachers like when you laugh at their jokes. ​
+Even if they are really really really really not funny. ​
+So, to win this game you need to do that. ​
+You just need to laugh. ​
+Teacher, you get to tell your best joke and students you just need to do a fake laugh. ​
+Like this 
+
+</main>
+<<button ">">><<goto "TGTG-9">><</button>>
+
+<<timed 28s>><<goto "TGTG-9">><</timed>>
+
+
+:: TGTG-10 {"position":"300,1225","size":"100,100"}
+<<audio ":all" stop>><<audio "Round1.5" play>>
+<main>
+Ok...here we go. ​
+Teacher when you are ready for your joke – GO!​
+Teacher, if you feel they were believable at laughing at your joke, then click complete. 
+</main>
+
+<<button "COMPLETE">><<goto "TGTG-11">><</button>>
+
+
+:: TGTG-11 {"position":"300,1350","size":"100,100"}
+<<audio ":all" stop>><<audio "Round2.1" play>>
+<<audio "titleUnderscore" volume 0.05 fadeout>>
+<main>
+ROUND 2 - COMPLIMENT BINGO​
+</main>
+
+<<button ">">><<goto "TGTG-12">><</button>>
+<<timed 5s>><<goto "TGTG-12">><</timed>>
+
+
+:: TGTG-12 {"position":"300,1475","size":"100,100"}
+<<audio ":all" stop>><<audio "Round2.2" play>>
+
+<main>
+Teacher, in your pack is a Bingo card.​
+
+Class, you cannot see the Bingo Card. ​
+
+However, you need to help the Teacher complete the Bingo card by giving them a compliment​
+
+E.g. Thanks for the lesson today OR you have nice hair. ​
+
+Put your hand up and if the compliment is on the list then we can tick it off. ​
+
+They have to be real compliments though! ​
+
+Teacher, when you have line shout BINGO and click it too!​
+</main>
+
+
+<<button "BINGO">><<goto "TGTG-13">><</button>>
+
+
+:: TGTG-13 {"position":"300,1600","size":"100,100"}
+<<audio ":all" stop>><<audio "Round3.1" play>>
+<<audio "titleUnderscore" volume 0.05 fadeout>>
+<main>
+ROUND 3 - 10 SUCCESSES
+</main>
+
+<<button ">">><<goto "TGTG-14">><</button>>
+
+<<timed 5s>><<goto "TGTG-14">><</timed>>
+
+
+:: TGTG-14 {"position":"300,1725","size":"100,100"}
+<<audio ":all" stop>><<audio "Round3.2" play>>
+
+<main>
+The target of a teacher is to help you learn. They spend all day at it!
+</main>
+
+<<button ">">><<goto "TGTG-15">><</button>>
+
+<<timed 5s>><<goto "TGTG-15">><</timed>>
+
+
+:: TGTG-15 {"position":"300,1850","size":"100,100"}
+<<audio ":all" stop>><<audio "Round3.3" play>>
+
+<main>
+They may help you learn how to spell, your times table, what makes you smile, that the world isn't over until it's actually over, to put your coat on at the end of the day, how to keep your clothes clean, to not fall over in puddles…​
+
+When they hear what you’ve learnt it charges them up. ​
+</main>
+
+<<button ">">><<goto "TGTG-16">><</button>>
+<<timed 21s>><<goto "TGTG-16">><</timed>>
+
+
+:: TGTG-16 {"position":"300,1975","size":"100,100"}
+<<audio ":all" stop>><<audio "Round3.4" play>>
+
+<main>
+So, for this game we need 10 successes. ​
+
+10 things you have learnt​
+
+Either as a class OR on your own​
+
+Thanks to the teacher. ​
+
+Can you get all 10? ​
+
+Oh…did we not mention You have 60 seconds to complete this. Click Go to start the clock.​
+<<button "GO">><<goto "TGTG-17">><</button>>
+</main>
+
+
+:: TGTG-17 {"position":"300,2100","size":"100,100"}
+<<audio ":all" stop>>
+<main>
+<div class="countdown">60</div>
+<<button "Finished!">><<goto "TGTG-18">><</button>>
+</main>
+
+<<set $seconds to 60>>
+	<<repeat 1s>>
+		<<set $seconds to $seconds - 1>>
+		<<if $seconds gt 0>>
+			<<replace ".countdown">>$seconds<</replace>>
+		<<else>>
+			<<replace ".next">><</replace>>
+			<<audio "alarm" play>>
+			<<stop>>
+		<</if>>
+	<</repeat>>
+
+
+:: TGTG-18 {"position":"300,2225","size":"100,100"}
+<<audio ":all" stop>><<audio "Round3.5" play>>
+<main>
+Did you get 10?
+<<button "YES">><<goto "TGTG-19">><</button>>
+<<button "CLOSE">><<goto "TGTG-19">><</button>>
+</main>
+
+
+:: TGTG-19 {"position":"300,2350","size":"100,100"}
+<<audio ":all" stop>><<audio "round4" play>>
+<<audio "titleUnderscore" volume 0.05 fadeout>>
+<main>
+ROUND 4: DISNEY TIDY TIME
+</main>
+
+<<timed 5s>><<goto "TGTG-20">><</timed>>
+
+
+:: TGTG-20 {"position":"300,2475","size":"100,100"}
+<<audio ":all" stop>><<audio "round4.1" play>>
+
+<main>
+Teachers love Disney (we’ve been told)​
+
+They also love tidy rooms (we know)​
+
+So, this game is a Disney Tidy Challenge. ​
+
+Teacher, you have 3 Disney songs to choose from. ​
+
+Before you choose you can decide what needs tidying​
+
+Maybe everyone just cleans their desks​
+
+Or maybe you want specific areas tidied​
+
+Or maybe it is already clean, and you just want to listen to a Disney Song for 120seconds. ​
+
+Class, you need to tidy the room to a standard that makes the teacher happy. ​
+
+<<button "NEXT">><<goto "TGTG-21">><</button>>
+
+</main>
+
+
+:: TGTG-21 {"position":"300,2600","size":"100,100"}
+<<audio ":all" stop>><<audio "round4.2" play>>
+
+<main>
+Ready to tidy?​
+
+Which song would you like? 
+
+
+
+SONG 1:
+<<button "SHINY- MOANA">><<goto "TGTG-22">><</button>>
+
+SONG 2:
+<<button "HAKUNA MATATA - LION KING">><<goto "TGTG-22">><</button>>
+
+SONG 3:
+<<button "UNDER THE SURFACE - ENCANTO">><<goto "TGTG-22">><</button>>
+
+</main>
+
+
+:: TGTG-22 {"position":"300,2725","size":"100,100"}
+<<audio ":all" stop>><<audio "round4.3" play>>
+
+<main>
+TIDY!
+<div class="countdown"></div>
+
+<<set $seconds to 120>>
+	<<repeat 1s>>
+		<<set $seconds to $seconds - 1>>
+		<<if $seconds gt 0>>
+			<<replace ".countdown">>$seconds<</replace>>
+		<<else>>
+			<<audio "alarm" play>>
+            <<timed 5s>><<goto "TGTG-23">><</timed>>
+			<<stop>>
+		<</if>>
+	<</repeat>>
+
+    <<button "NEXT">><<goto "TGTG-21">><</button>>
+    
+</main>
+
+
+:: TGTG-23 {"position":"300,2850","size":"100,100"}
+<<audio ":all" stop>><<audio "round5.1" play>>
+<<audio "titleUnderscore" volume 0.05 fadeout>>
+<main>
+ROUND 5 - MAKE THEM LAUGH
+</main>
+
+<<timed 5s>><<goto "TGTG-24">><</timed>>
+
+
+:: TGTG-24 {"position":"300,2975","size":"100,100"}
+<<audio ":all" stop>><<audio "round5.2" play>>
+<main>
+Teachers love a good laugh​
+
+At the right time of course​
+
+They like focus too​
+
+But if you can get them at the right moment,​
+
+And make them laugh,​
+
+It is pure joy. ​
+
+Now is that moment. 
+<<button "NEXT">><<goto "TGTG-25">><</button>>
+</main>
+
+<<timed 14s>><<goto "TGTG-25">><</timed>>
+
+
+:: TGTG-25 {"position":"300,3100","size":"100,100"}
+<<audio ":all" stop>><<audio "round5.3" play>>
+
+Teacher, I need you to be in the front of the class looking angry, annoyed or mean! ​
+
+Only the teacher can choose who will speak to them. ​
+
+Students, you have 90 seconds to turn that frown upside down with your best joke
+
+<<button "GO">><<goto "TGTG-26">><</button>>
+
+
+:: TGTG-26 {"position":"300,3225","size":"100,100"}
+<<audio ":all" stop>><<audio "round5.3" play>>
+
+<main>
+<div class="countdown"></div>
+<<button "NEXT">><<goto "TGTG-27">><</button>>
+</main>
+
+<<set $seconds to 90>>
+	<<repeat 1s>>
+		<<set $seconds to $seconds - 1>>
+		<<if $seconds gt 0>>
+			<<replace ".countdown">>$seconds<</replace>>
+		<<else>>
+			<<replace ".next">><</replace>>
+			<<audio "alarm" play>>
+            <<timed 5s>><<goto "TGTG-27">><</timed>>
+			<<stop>>
+		<</if>>
+	<</repeat>>
+
+
+:: TGTG-27 {"position":"300,3350","size":"100,100"}
+<<audio ":all" stop>><<audio "HDYF2" play>>
+
+
+<main>
+
+HOW DO THEY FEEL NOW?
+
+TEACHER, THE LAST QUESTION IS FOR YOU. ​
+
+HOW ARE YOU RIGHT NOW? ​​
+
+BETWEEN 1-100. ​
+
+100 being the MOST incredible you have ever felt in your life ​
+
+1 being the LOWEST you have every felt in your life. 
+
+<<button "NEXT">><<goto "TGTG-28">><</button>>
+
+</main>
+
+
+:: TGTG-28 {"position":"300,3475","size":"100,100"}
+<<audio ":all" stop>><<audio "HDYF3" play>>
+
+<main>
+
+Did the number go up or down?
+
+<<button "UP">><<goto "TGTG-29A">><</button>>
+<<button "DOWN">><<goto "TGTG-29B">><</button>>
+</main>
+
+
+:: TGTG-29A {"position":"225,3600","size":"100,100"}
+<<audio ":all" stop>><<audio "fanfare" play>>
+<main>CONGRATULATIONS!</main>
+
+<<timed 5s>><<goto TGTG-30>><</timed>>
+
+
+:: TGTG-29B {"position":"375,3600","size":"100,100"}
+<main>OH NO - BETTER TRY AGAIN!</main>
+
+
+:: TGTG-30 {"position":"300,3725","size":"100,100"}
+<<audio ":all" stop>><<audio "Reward" play>>
+<<audio "underscore1" volume 0.05 loop play>>
+
+<main>
+REWARD
+
+Teachers like when you are smiling​
+
+Not just at their jokes​
+
+But when you smile as you are happy. ​
+
+So, we have a game for you to play class. ​
+
+Teacher, this game takes 10 minutes, so you can come play now or come back to it later. ​
+
+It is a drawing game. ​
+
+A game to make you all smile. ​
+
+Thanks for playing our game.​
+
+Congratulations Teacher. ​
+
+You did FAB.
+
+</main>
+
+
