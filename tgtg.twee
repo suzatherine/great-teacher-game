@@ -14,7 +14,7 @@ The Great Teacher Game
 
 :: Story Stylesheet [stylesheet]
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Pangolin&display=swap');
 
 /* GENERICS */
 html {
@@ -209,9 +209,13 @@ body{
   flex-direction: column
 }
 
-h1, p{
+h1{
 color: black;
- 
+font-family: 'Fredoka One', cursive;
+}
+
+p{
+  color:black;
 }
 
 main{
@@ -353,7 +357,7 @@ $(document.head).find('#style-ui-bar').remove();
 <main id="start"><div id="start-top">
   <img id="teacherIcon" src="https://www.dropbox.com/s/i18umpdkej5jtlb/teacherIcon.PNG?dl=1">
 </div><div class="flex-center-container">
-<h1>THE GREAT TEACHER GAME</h1><p class>A game FOR teachers, to play with their class</p><<button "START">>
+<h1>THE GREAT TEACHER GAME</h1><p>A game FOR teachers, to play with their class</p><<button "START">>
   <<goto "TGTG-2">>
 <</button>>
 </div>
@@ -384,49 +388,49 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
-<<cacheaudio "Game1" "https://www.dropbox.com/s/pehmvas54kvpf1l/Game1.mp3?dl=1">>
-<<cacheaudio "Game2" "https://www.dropbox.com/s/2uuo1ylo4o9nnw5/Game2.mp3?dl=1">>
+<<cacheaudio "Game1" "https://www.youhavefoundconey.net/gtg/Game/Game1.mp3">>
+<<cacheaudio "Game2" "https://www.youhavefoundconey.net/gtg/Game/Game2.mp3">>
 
-<<cacheaudio "Game3" "https://www.dropbox.com/s/2h7xr7bb4h1aawe/Game3.mp3?dl=1">>
-<<cacheaudio "Game4" "https://www.dropbox.com/s/zqmr94otxnd7mnx/Game4.mp3?dl=1">>
-<<cacheaudio "Game5" "https://www.dropbox.com/s/uxz7dd66zw9vwzz/Game5.mp3?dl=1">>
-<<cacheaudio "HDYF2" "https://www.dropbox.com/s/l3i3ytwuhzwiutl/HDYF2.mp3?dl=1">>
-<<cacheaudio "HDYF3" "https://www.dropbox.com/s/vaqff0twvpkztiy/HDYF3.mp3?dl=1">>
+<<cacheaudio "Game3" "https://www.youhavefoundconey.net/gtg/Game/Game3.mp3">>
+<<cacheaudio "Game4" "https://www.youhavefoundconey.net/gtg/Game/Game4.mp3">>
+<<cacheaudio "Game5" "https://www.youhavefoundconey.net/gtg/Game/Game5.mp3">>
+<<cacheaudio "HDYF2" "https://www.youhavefoundconey.net/gtg/Game/HDYF2.mp3">>
+<<cacheaudio "HDYF3" "https://www.youhavefoundconey.net/gtg/Game/HDYF3.mp3">>
 
-<<cacheaudio "Reward" "https://www.dropbox.com/s/bc8g2lrvbp4j910/Reward.mp3?dl=1" >>
-<<cacheaudio "Round1.1" "https://www.dropbox.com/s/7r32hyh2u0yqoba/Round1.1.mp3?dl=1" >>
-<<cacheaudio "Round1.2" "https://www.dropbox.com/s/ol312c53z9037by/Round1.2.mp3?dl=1" >>
-<<cacheaudio "Round1.3" "https://www.dropbox.com/s/del1liq0stshxvg/Round1.3.mp3?dl=1" >>
-<<cacheaudio "Round1.4" "https://www.dropbox.com/s/wnxydzcep0qal4t/Round1.4.mp3?dl=1" >>
-<<cacheaudio "Round1.5" "https://www.dropbox.com/s/9bafvltsp4dnp1e/Round1.5.mp3?dl=1" >>
-<<cacheaudio "Round2.1" "https://www.dropbox.com/s/dffemmtkenupno5/Round2.1.mp3?dl=1" >>
-<<cacheaudio "Round2.2" "https://www.dropbox.com/s/auxmgu60gy41wj0/Round2.2.mp3?dl=1" >>
-<<cacheaudio "Round3.1" "https://www.dropbox.com/s/hs679nxbaggbnzq/Round3.1.mp3?dl=1" >>
-<<cacheaudio "Round3.2" "https://www.dropbox.com/s/cukt7qd1n0cd7ga/Round3.2.mp3?dl=1" >>
-<<cacheaudio "Round3.3" "https://www.dropbox.com/s/0y5ryftaun0j9q3/Round3.3.mp3?dl=1" >>
-<<cacheaudio "Round3.4" "https://www.dropbox.com/s/mfivukvotdct2wy/Round3.4.mp3?dl=1" >>
-<<cacheaudio "Round3.5" "https://www.dropbox.com/s/ohybpkqtmgqzjy8/Round3.5.mp3?dl=1" >>
+<<cacheaudio "Reward" "https://www.youhavefoundconey.net/gtg/Game/Reward.mp3" >>
+<<cacheaudio "Round1.1" "https://www.youhavefoundconey.net/gtg/Game/Round1.1.mp3" >>
+<<cacheaudio "Round1.2" "https://www.youhavefoundconey.net/gtg/Game/Round1.2.mp3" >>
+<<cacheaudio "Round1.3" "https://www.youhavefoundconey.net/gtg/Game/Round1.3.mp3" >>
+<<cacheaudio "Round1.4" "https://www.youhavefoundconey.net/gtg/Game/Round1.4.mp3" >>
+<<cacheaudio "Round1.5" "https://www.youhavefoundconey.net/gtg/Game/Round1.5.mp3" >>
+<<cacheaudio "Round2.1" "https://www.youhavefoundconey.net/gtg/Game/Round2.1.mp3" >>
+<<cacheaudio "Round2.2" "https://www.youhavefoundconey.net/gtg/Game/Round2.2.mp3" >>
+<<cacheaudio "Round3.1" "https://www.youhavefoundconey.net/gtg/Game/Round3.1.mp3" >>
+<<cacheaudio "Round3.2" "https://www.youhavefoundconey.net/gtg/Game/Round3.2.mp3" >>
+<<cacheaudio "Round3.3" "https://www.youhavefoundconey.net/gtg/Game/Round3.3.mp3" >>
+<<cacheaudio "Round3.4" "https://www.youhavefoundconey.net/gtg/Game/Round3.4.mp3" >>
+<<cacheaudio "Round3.5" "https://www.youhavefoundconey.net/gtg/Game/Round3.5.mp3" >>
 
-<<cacheaudio "round4.1" "https://www.dropbox.com/s/c1z8mvp7kqxugdx/round4.1.mp3?dl=1" >>
-<<cacheaudio "round4.2" "https://www.dropbox.com/s/i1j5mxuroocusle/round4.2.mp3?dl=1" >>
-<<cacheaudio "round4.3" "https://www.dropbox.com/s/wl88ksnos6rgim7/round4.3.mp3?dl=1" >>
-<<cacheaudio "round4" "https://www.dropbox.com/s/duy594ptvipsuvg/round4.mp3?dl=1" >>
+<<cacheaudio "round4.1" "https://www.youhavefoundconey.net/gtg/Game/round4.1.mp3" >>
+<<cacheaudio "round4.2" "https://www.youhavefoundconey.net/gtg/Game/round4.2.mp3" >>
+<<cacheaudio "round4.3" "https://www.youhavefoundconey.net/gtg/Game/round4.3.mp3" >>
+<<cacheaudio "round4" "https://www.youhavefoundconey.net/gtg/Game/round4.mp3" >>
 
-<<cacheaudio "round5.1" "https://www.dropbox.com/s/qxfsd020n0x7y95/round5.1.mp3?dl=1" >>
-<<cacheaudio "round5.2" "https://www.dropbox.com/s/6gtvgc8pc4fhsro/round5.2.mp3?dl=1" >>
-<<cacheaudio "round5.3" "https://www.dropbox.com/s/d1i586ngdoza9r4/round5.3.mp3?dl=1" >>
-<<cacheaudio "underscore1" "https://www.dropbox.com/s/ruln2cdpcw6ayeu/underscore%201.mp3?dl=1" >>
-<<cacheaudio "underscore2" "https://www.dropbox.com/s/qecki3vo6ly9ird/underscore%202.mp3?dl=1" >>
+<<cacheaudio "round5.1" "https://www.youhavefoundconey.net/gtg/Game/round5.1.mp3" >>
+<<cacheaudio "round5.2" "https://www.youhavefoundconey.net/gtg/Game/round5.2.mp3" >>
+<<cacheaudio "round5.3" "https://www.youhavefoundconey.net/gtg/Game/round5.3.mp3" >>
+<<cacheaudio "underscore1" "https://www.youhavefoundconey.net/gtg/Game/underscore%201.mp3" >>
+<<cacheaudio "underscore2" "https://www.youhavefoundconey.net/gtg/Game/underscore%202.mp3" >>
 
-<<cacheaudio "titleUnderscore" "https://www.dropbox.com/s/4sozah6p6bpo5d3/titleUnderscore.mp3?dl=1" >>
-<<cacheaudio "titleUnderscore2" "https://www.dropbox.com/s/v2pdd7dwt5ngun8/titleunderscore2.mp3?dl=1" >>
+<<cacheaudio "titleUnderscore" "https://www.youhavefoundconey.net/gtg/Game/titleUnderscore.mp3" >>
+<<cacheaudio "titleUnderscore2" "https://www.youhavefoundconey.net/gtg/Game/titleunderscore2.mp3" >>
 
-<<cacheaudio "alarm" "https://www.dropbox.com/s/wtz3b9u9egcsfy8/alarm.mp3?dl=1" >>
-<<cacheaudio "fanfare" "https://www.dropbox.com/s/u4pa1hyev4k0ic5/fanfare.mp3?dl=1" >>
+<<cacheaudio "alarm" "https://www.youhavefoundconey.net/gtg/Game/alarm.mp3" >>
+<<cacheaudio "fanfare" "https://www.youhavefoundconey.net/gtg/Game/fanfare.mp3" >>
 
-<<cacheaudio "shiny" "https://www.dropbox.com/s/knm60ha7267y13o/shiny.mp3?dl=1" >>
-<<cacheaudio "hakunaMatata" "https://www.dropbox.com/s/agcri46ksewflk8/hakunaMatata.mp3?dl=1" >>
-<<cacheaudio "bruno" "https://www.dropbox.com/s/gatpok0aa5nnbuf/bruno.mp3?dl=1" >>
+<<cacheaudio "shiny" "https://www.youhavefoundconey.net/gtg/Game/shiny.mp3?dl=1" >>
+<<cacheaudio "hakunaMatata" "https://www.youhavefoundconey.net/gtg/Game/hakunaMatata.mp3" >>
+<<cacheaudio "bruno" "https://www.youhavefoundconey.net/gtg/Game/bruno.mp3" >>
 
 
 
@@ -490,11 +494,9 @@ Does the number go up or down?
 
 
 :: TGTG-7 {"position":"300,850","size":"100,100"}
-<<addclass "body" "orange">><<audio ":all" stop>><<audio "titleUnderscore2" fadeout>><main>
+<<addclass "body" "orange">><<audio ":all" stop>><main>
 <img class="cat" src="https://www.dropbox.com/s/7sxq02vm25u0kme/cat.png?dl=1">
-<<timed 5s>>
-  <<audio "Round1.1" play>>
- <div class = "flex-center-container"><h1>ROUND 1 -  TEACHER YOU ARE SO FUNNY</h1></div>
+<<audio "titleUnderscore2" volume 1 fadeout>><<timed 5s>><<audio "Round1.1" play>><div class = "flex-center-container"><h1>ROUND 1 -  TEACHER YOU ARE SO FUNNY</h1></div>
 <</timed>>
 </main>
 <<timed 9s>><<goto "TGTG-8">><</timed>>
@@ -531,22 +533,23 @@ Like this:
 <<addclass "body" "orange">>
 <<audio ":all" stop>><<audio "Round1.5" play>>
 <main class="flex-center-container">
+<div class="speech padding">
 Ok...here we go. 
 Teacher when you are ready for your joke – GO!
 Teacher, if you feel they were believable at laughing at your joke, then click complete. 
 
+</div>
 <<button "COMPLETE">><<goto "TGTG-11">><</button>>
 </main>
 
 
 :: TGTG-11 {"position":"300,1350","size":"100,100"}
 <<audio ":all" stop>>
-<<audio "titleUnderscore2"  fadeout>>
-
+<<audio "titleUnderscore2" volume 1 fadeout>>
 <main class="flex-center-container">
 <<timed 5s>>
   <<audio "Round2.1" play>>
-  ROUND 2 - COMPLIMENT BINGO
+  <h1>ROUND 2 - COMPLIMENT BINGO</h1>
 <</timed>>
 </main>
 
@@ -556,6 +559,7 @@ Teacher, if you feel they were believable at laughing at your joke, then click c
 :: TGTG-12 {"position":"300,1475","size":"100,100"}
 <<audio ":all" stop>><<audio "Round2.2" play>>
 <main class="flex-center-container"><div  class="flex-rows-align">
+<img class="padding" src="https://www.dropbox.com/s/y8jwa2wf480j8db/bingo.PNG?dl=1">
 <div class=" speech padding">
 Teacher, in your pack is a Bingo card.
 Class, you cannot see the Bingo Card. 
@@ -566,7 +570,6 @@ They have to be real compliments though!
 Teacher, when you have line shout BINGO and click it too!
 
 </div>
-<img class="padding" src="https://www.dropbox.com/s/y8jwa2wf480j8db/bingo.PNG?dl=1">
 </div>
 <<button "BINGO">><<goto "TGTG-13">><</button>>
 </main>
@@ -575,9 +578,8 @@ Teacher, when you have line shout BINGO and click it too!
 :: TGTG-13 {"position":"300,1600","size":"100,100"}
 <<addclass "body" "lightblue">>
 <<audio ":all" stop>>
-<<audio "titleUnderscore2" fadeout>>
-
 <main class="flex-center-container">
+<<audio "titleUnderscore2" volume 1 fadeout>>
 <<timed 5s>>
   <<audio "Round3.1" play>>
  <h1>ROUND 3 - 10 SUCCESSES</h1>
@@ -590,8 +592,9 @@ Teacher, when you have line shout BINGO and click it too!
 :: TGTG-14 {"position":"300,1725","size":"100,100"}
 <<addclass "body" "lightblue">><<audio ":all" stop>><<audio "Round3.2" play>>
 
-<main class="flex-center-container">
+<main class="flex-center-container speech padding">
 The target of a teacher is to help you learn. They spend all day at it!
+
 </main>
 
 <<timed 5s>><<goto "TGTG-15">><</timed>>
@@ -600,10 +603,11 @@ The target of a teacher is to help you learn. They spend all day at it!
 :: TGTG-15 {"position":"300,1850","size":"100,100"}
 <<addclass "body" "lightblue">><<audio ":all" stop>><<audio "Round3.3" play>>
 
-<main class="flex-center-container padding">
+<main class="flex-center-container padding speech padding">
 They may help you learn how to spell, learn your times table, what makes you smile, that the world isn't over until it's actually over, to put your coat on at the end of the day, how to keep your clothes clean, to not fall in puddles…
 
 When they hear what you’ve learnt it charges them up. 
+
 </main>
 
 <<timed 21s>><<goto "TGTG-16">><</timed>>
@@ -611,7 +615,7 @@ When they hear what you’ve learnt it charges them up.
 
 :: TGTG-16 {"position":"300,1975","size":"100,100"}
 <<addclass "body" "lightblue">><<audio ":all" stop>><<audio "Round3.4" play>>
-<main class="flex-center-container padding">
+<main class="flex-center-container padding"><div class="speech padding">
 So, for this game we need 10 successes. 
 10 things you have learnt
 Either as a class OR on your own
@@ -619,6 +623,7 @@ Thanks to the teacher.
 Can you get all 10? 
 Oh…did we not mention You have 60 seconds to complete this? Click Go to start the clock.
 
+</div>
 <<button "GO">><<goto "TGTG-17">><</button>>
 </main>
 
@@ -661,9 +666,9 @@ Did you get 10?
 
 :: TGTG-19 {"position":"300,2350","size":"100,100"}
 <<audio ":all" stop>>
-<<audio "titleUnderscore2" fadeout>>
 
 <main class="flex-center-container">
+<<audio "titleUnderscore2" volume 1 fadeout>>
 <<timed 5s>>
   <<audio "round4" play>>
   <h1>ROUND 4: DISNEY TIDY TIME</h1>
@@ -675,7 +680,7 @@ Did you get 10?
 
 :: TGTG-20 {"position":"300,2475","size":"100,100"}
 <<audio ":all" stop>><<audio "round4.1" play>>
-<main class="flex-center-container padding">
+<main class="flex-center-container padding"> <div class="speech padding">
 Teachers love Disney (we’ve been told)
 They also love tidy rooms (we know)
 So, this game is a Disney Tidy Challenge. 
@@ -686,6 +691,7 @@ Or maybe you want specific areas tidied
 Or maybe it is already clean, and you just want to listen to a Disney Song for 120seconds. 
 Class, you need to tidy the room to a standard that makes the teacher happy. 
 
+</div>
 <<button "NEXT">><<goto "TGTG-21">><</button>>
 
 </main>
@@ -754,7 +760,7 @@ SONG 3:
 
 :: TGTG-23 {"position":"300,2850","size":"100,100"}
 <<audio ":all" stop>>
-<<audio "titleUnderscore2" fadeout>>
+<<audio "titleUnderscore2" volume 1 fadeout>>
 <main>
 <<timed 5s>>
 <<audio "round5.1" play>>
@@ -769,7 +775,7 @@ SONG 3:
 
 :: TGTG-24 {"position":"300,2975","size":"100,100"}
 <<audio ":all" stop>><<audio "round5.2" play>>
-<main class = "flex-center-container">
+<main class = "flex-center-container speech padding">
 Teachers love a good laugh
 At the right time of course
 They like focus too
@@ -777,6 +783,7 @@ But if you can get them at the right moment,
 And make them laugh,
 It is pure joy. 
 Now is that moment. 
+
 </main>
 
 <<timed 14s>><<goto "TGTG-25">><</timed>>
@@ -784,11 +791,12 @@ Now is that moment.
 
 :: TGTG-25 {"position":"300,3100","size":"100,100"}
 <<audio ":all" stop>><<audio "round5.3" play>>
-<main class="flex-center-container">
+<main class="flex-center-container"><div class="speech padding">
 Teacher, I need you to be in the front of the class looking angry, annoyed or mean! ​
 Only the teacher can choose who will speak to them. ​
 Students, you have 90 seconds to turn that frown upside down with your best joke
 
+</div>
 <<button "GO">><<goto "TGTG-26">><</button>>
 
 </main>
@@ -820,13 +828,14 @@ Students, you have 90 seconds to turn that frown upside down with your best joke
 
 :: TGTG-27 {"position":"300,3350","size":"100,100"}
 <<audio ":all" stop>><<audio "HDYF2" play>><<audio "underscore2" volume 0.05 loop play>><main class="flex-center-container">
-<h1>HOW DO THEY FEEL NOW?</h1>
+<h1>HOW DO YOU FEEL NOW?</h1><div class = "speech padding">
 TEACHER, THE LAST QUESTION IS FOR YOU. 
 HOW ARE YOU RIGHT NOW? 
 BETWEEN 1-100. 
 100 being the MOST incredible you have ever felt in your life 
 1 being the LOWEST you have every felt in your life. 
 
+</div>
 <<button "NEXT">><<goto "TGTG-28">><</button>>
 
 </main>
@@ -858,13 +867,13 @@ Did the number go up or down?
 :: TGTG-29B {"position":"375,3600","size":"100,100"}
 <<addclass "body" "end">>
 <<audio ":all" stop>><<audio "underscore1" volume 0.05 loop play>>
-<main class="flex-center-container"><h1>OH NO - BETTER TRY AGAIN!</h1></main>
+<main class="flex-center-container"><h1>OH NO - LET'S TRY ONE MORE!</h1></main>
 <<timed 5s>><<goto TGTG-30>><</timed>>
 
 
 :: TGTG-30 {"position":"300,3725","size":"100,100"}
 <<audio "Reward" play>><<audio "underscore1" volume 0.02 loop play>><main class="flex-rows-align padding">
-<div class="flex-center-container padding">
+<div class="flex-center-container padding speech">
 <h1>REWARD</h1>Teachers like when you are smiling
 Not just at their jokes
 But when you smile as you are happy. 
@@ -876,6 +885,7 @@ A game to make you all smile.
 Thanks for playing our game.
 Congratulations Teacher. 
 You did FAB.
+
 </div>
 <img class="fold" src="https://www.dropbox.com/s/z20t2key4jl66tx/fold.gif?dl=1">
 
