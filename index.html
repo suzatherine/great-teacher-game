@@ -99,6 +99,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
 	<tw-storydata name="The Great Teacher Game" startnode="1" creator="Twine" creator-version="2.5.1" format="SugarCube" format-version="2.36.1" ifid="18306b07-adec-4e25-b97e-ec322318d1f4" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 
 /* GENERICS */
 html {
@@ -238,16 +239,25 @@ button * {
 	content: "";
 }
 
+
+
+
 button{
-    background-color: transparent;
+    background-color: #38b698;
     border: #fff 1px solid;
     border-radius: 3px;
+  	height: 3em;
+  	width: 8em;
+  	font-size: 1.5em;
+    padding: 0.5em;
+ 	width: fit-content;
+  	height: fit-content;
 }
 
 button:hover{
 	background-color:#ea9e25;
-	border: #fff 1px solid;
-	color: #fff;
+	border: #ffffff 1px solid;
+	color: #ffffff;
 }
 
 a {
@@ -272,186 +282,93 @@ a:hover {
 
 /* GENERAL STYLES */
 body{
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-weight: 600;
-  font-family: "Space Grotesk";
-  color:#fff;
+  font-family: 'Pangolin', cursive;
+  color:black;
   /* color:#000; */
   overflow:scroll;
-  background:#188081;
+  background:#d5f2eb;
   /* padding: 1.5rem */
   display:flex;
   flex-direction: column
 }
 
-header{
-  display:flex;
-  justify-content: flex-end;
-  align-items: center;
-    padding: 2rem
+h1, p{
+color: black;
+ 
 }
+
 main{
-   padding: 2rem;
-   margin-block-end: 10rem
+   padding: 0px;
+   margin-block-end: 10rem;
+   justify-content:   center;
 }
 
-input[type=text]{
-  border: 1px solid #fff
+.orange{
+background-color:#e5b494;
 }
-/* FOOTER  */
-
-footer{
-   display:flex;
-  justify-content: space-between;
-align-items: end;
-  position:fixed;
-  bottom: 0;
-  padding: 2rem;
-  width: 100%;
-background: #188081;
+.lightblue{
+background-color:#d5eef5;
 }
 
-nav{
+#teacherIcon{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 250px;
+}
+
+#start-top{
+background-color: #ffffff;
+}
+
+.flex-center-container{
   display:flex;
-    justify-content: space-between;
-}
-
-.nav-wrapper{
-display:flex;
+  justify-content:center;
+  align-items:center;
   flex-direction:column;
-align-items: flex-start
 }
-
-.nav-wrapper:last-child{
-align-items: flex-end
-}
-
-.nav-item{
-  margin-block-end: 0.5rem;
-  width:100%;
-  display:flex
-}
-
-.nav-item.replay, .nav-item.end{
-justify-content: center
-}
-.nav-item.replay, .nav-item.forward{
-justify-content: end
-}
-
-.nav-item.replay, .nav-item.back{
-justify-content: start
-}
-
-.nav-item.forward > button, 
-.nav-item.back > button{
-  font-size:2rem
-}
-footer > button:first-child,  {
-  font-size:2rem
-}
-
-.nav-item > button{
- font-size: 1.3rem
-}
-
-.menu-wrapper{
-  display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.menu-wrapper > button{
-margin-inline-end: 10px;
-margin-block-end: 10px
-}
-
-
-textarea{
-  min-width: 60vw
-}
-
-.wordcontainer{
+.flex-rows-align{
   display:flex;
-  flex-direction: row;
+  justify-content:center;
+  align-items:center;
+}
+.padding{
+padding:20px;
 }
 
-.letter-item > input[type=text]{
-    min-width: 2em;
-  	max-width: 2em;
-  	margin-inline-end:10px;
+.speech{
+  background-color: #ffffff;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 4px;
+  border: 2px solid black;
 }
 
-.letter-item > .correct-letter{
-  min-width: 2em;
-  	max-width: 2em;
-  	margin-inline-end:10px;
+.end{
+background-image: url("https://www.dropbox.com/s/u5hls2fypyhnl3d/celebrate.PNG?dl=1");
+    background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-
-
-
-@keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
+.countdown{
+font-size:4rem;
 }
 
-
-/* MAP */
-	.map{
-width: 100%;
-    height: 60vh;
-    border: 0;
-    margin: auto;
-    }
-
-
-.directions-card {
-    display: none!important
+.laugh-right{
+background-color:#ffffff;
 }
 
-@media screen and (min-width: 450px) {
-.map{
-	max-width:60vw;
-	height:50vh;
-	border:0
-}
+.cat{
+height:80%;
 }
 
-/* SPECIFICS */
-
-.dropdown-wrapper{
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-between;
+.fold{
+width:40%;
 }
 
-.wrong {
-  color:#f6cbc0;
-}
-
-.question{
-  border: 1px solid #fff;
-    padding: 10px;
-}
-
-input[type=text], select{
-  border: 1px solid #fff
-}
-
-input[type=text]{
-  min-width: 60%
-}
-
-h2.title{
-  font-size:2.5rem
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">$('#ui-bar').remove();
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">$('#ui-bar').remove();
 $(document.head).find('#style-ui-bar').remove();
 // TYPEWRITER FN
 !function() {
@@ -512,45 +429,31 @@ $(document.head).find('#style-ui-bar').remove();
             }
         ,t);
     };
-}();</script><tw-passagedata pid="1" name="TGTG-1" tags="" position="300,100" size="100,100">&lt;main&gt;
-
-THE GREAT TEACHER GAME
-
-A game FOR teachers, to play with their class
-
-&lt;&lt;button &quot;START&quot;&gt;&gt;
+}();</script><tw-passagedata pid="1" name="TGTG-1" tags="" position="300,100" size="100,100">&lt;main id=&quot;start&quot;&gt;&lt;div id=&quot;start-top&quot;&gt;
+  &lt;img id=&quot;teacherIcon&quot; src=&quot;https://www.dropbox.com/s/i18umpdkej5jtlb/teacherIcon.PNG?dl=1&quot;&gt;
+&lt;/div&gt;&lt;div class=&quot;flex-center-container&quot;&gt;
+&lt;h1&gt;THE GREAT TEACHER GAME&lt;/h1&gt;&lt;p class&gt;A game FOR teachers, to play with their class&lt;/p&gt;&lt;&lt;button &quot;START&quot;&gt;&gt;
   &lt;&lt;goto &quot;TGTG-2&quot;&gt;&gt;
 &lt;&lt;/button&gt;&gt;
+&lt;/div&gt;
 
 &lt;/main&gt;
 </tw-passagedata><tw-passagedata pid="2" name="TGTG-2" tags="" position="300,225" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Game1&quot; play&gt;&gt;
 &lt;&lt;audio &quot;underscore1&quot; volume 0.05 loop play&gt;&gt;
 &lt;main&gt;
-
-Welcome to the Great Teacher Game. ​
-Class you are needed.​
-You decide the fate of your teacher.​
-Without you the teacher is not a teacher…​
-They are just a regular human being with lots of pens!
-
+&lt;div class = &quot;flex-center-container speech&quot; &gt;
+&lt;p&gt;Welcome to the Great Teacher Game.&lt;/p&gt;&lt;p&gt;Class you are needed.&lt;/p&gt;&lt;p&gt;You decide the fate of your teacher.&lt;/p&gt;&lt;p&gt;Without you the teacher is not a teacher…&lt;/p&gt;&lt;p&gt;They are just a regular human being with lots of pens!&lt;/p&gt;
+&lt;/div&gt;
 &lt;&lt;timed 15s&gt;&gt;&lt;&lt;goto &quot;TGTG-3&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
-
-
 &lt;/main&gt;</tw-passagedata><tw-passagedata pid="3" name="TGTG-3" tags="" position="300,350" size="100,100">&lt;&lt;audio &quot;Game1&quot; stop&gt;&gt;
 &lt;&lt;audio &quot;Game2&quot; play&gt;&gt;
-
-
-&lt;main&gt;
-Today you are needed to help your teacher​
-Your actions will decide something very important today. ​
-Your actions will decide...​
-How your teacher FEEEEEEEEEELS!​
-Complete the challenges and the teacher will feel fab. ​
-If you fail, they may need a strawberry trifle with lots of cream on top. 
+&lt;main&gt;&lt;div class=&quot;flex-center-container speech&quot;&gt;
+&lt;p&gt;Today you are needed to help your teacher&lt;/p&gt;&lt;p&gt;Your actions will decide something very important today. &lt;/p&gt;&lt;p&gt;Your actions will decide...&lt;/p&gt;&lt;p&gt;How your teacher FEEEEEEEEEELS!&lt;/p&gt;&lt;p&gt;Complete the challenges and the teacher will feel fab. &lt;/p&gt;&lt;p&gt;If you fail, they may need a strawberry trifle with lots of cream on top.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/main&gt;
 
 &lt;&lt;timed 17s&gt;&gt;&lt;&lt;goto &quot;TGTG-4&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;cacheaudio &quot;Game1&quot; &quot;https://www.dropbox.com/s/pehmvas54kvpf1l/Game1.mp3?dl=1&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;Game2&quot; &quot;https://www.dropbox.com/s/9qvjymz58adefbh/Game2.mp3?dl=1&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;Game2&quot; &quot;https://www.dropbox.com/s/2uuo1ylo4o9nnw5/Game2.mp3?dl=1&quot;&gt;&gt;
 
 &lt;&lt;cacheaudio &quot;Game3&quot; &quot;https://www.dropbox.com/s/2h7xr7bb4h1aawe/Game3.mp3?dl=1&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;Game4&quot; &quot;https://www.dropbox.com/s/zqmr94otxnd7mnx/Game4.mp3?dl=1&quot;&gt;&gt;
@@ -579,15 +482,20 @@ If you fail, they may need a strawberry trifle with lots of cream on top.
 
 &lt;&lt;cacheaudio &quot;round5.1&quot; &quot;https://www.dropbox.com/s/qxfsd020n0x7y95/round5.1.mp3?dl=1&quot; &gt;&gt;
 &lt;&lt;cacheaudio &quot;round5.2&quot; &quot;https://www.dropbox.com/s/6gtvgc8pc4fhsro/round5.2.mp3?dl=1&quot; &gt;&gt;
-&lt;&lt;cacheaudio &quot;round5.3&quot; &quot;https://www.dropbox.com/s/q86jh0n7nrw31g2/round5.3.mp3?dl=1&quot; &gt;&gt;
+&lt;&lt;cacheaudio &quot;round5.3&quot; &quot;https://www.dropbox.com/s/d1i586ngdoza9r4/round5.3.mp3?dl=1&quot; &gt;&gt;
 &lt;&lt;cacheaudio &quot;underscore1&quot; &quot;https://www.dropbox.com/s/ruln2cdpcw6ayeu/underscore%201.mp3?dl=1&quot; &gt;&gt;
 &lt;&lt;cacheaudio &quot;underscore2&quot; &quot;https://www.dropbox.com/s/qecki3vo6ly9ird/underscore%202.mp3?dl=1&quot; &gt;&gt;
 
 &lt;&lt;cacheaudio &quot;titleUnderscore&quot; &quot;https://www.dropbox.com/s/4sozah6p6bpo5d3/titleUnderscore.mp3?dl=1&quot; &gt;&gt;
+&lt;&lt;cacheaudio &quot;titleUnderscore2&quot; &quot;https://www.dropbox.com/s/v2pdd7dwt5ngun8/titleunderscore2.mp3?dl=1&quot; &gt;&gt;
 
 &lt;&lt;cacheaudio &quot;alarm&quot; &quot;https://www.dropbox.com/s/wtz3b9u9egcsfy8/alarm.mp3?dl=1&quot; &gt;&gt;
-
 &lt;&lt;cacheaudio &quot;fanfare&quot; &quot;https://www.dropbox.com/s/u4pa1hyev4k0ic5/fanfare.mp3?dl=1&quot; &gt;&gt;
+
+&lt;&lt;cacheaudio &quot;shiny&quot; &quot;https://www.dropbox.com/s/knm60ha7267y13o/shiny.mp3?dl=1&quot; &gt;&gt;
+&lt;&lt;cacheaudio &quot;hakunaMatata&quot; &quot;https://www.dropbox.com/s/agcri46ksewflk8/hakunaMatata.mp3?dl=1&quot; &gt;&gt;
+&lt;&lt;cacheaudio &quot;bruno&quot; &quot;https://www.dropbox.com/s/gatpok0aa5nnbuf/bruno.mp3?dl=1&quot; &gt;&gt;
+
 
 
 
@@ -598,302 +506,312 @@ If you fail, they may need a strawberry trifle with lots of cream on top.
 &lt;&lt;audio &quot;underscore1&quot; volume 0.05 fadeoverto 10 0&gt;&gt;
 
 &lt;main&gt;
-So, let&#39;s do this class. ​
-Let&#39;s win this game. ​
-Let’s play The Great Teacher Game.
-​
+&lt;div class=&quot;flex-center-container speech&quot;&gt;
+&lt;p&gt;So, let&#39;s do this class.&lt;/p&gt;&lt;p&gt;Let&#39;s win this game.&lt;/p&gt;&lt;p&gt;Let’s play The Great Teacher Game.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/main&gt;
 
-&lt;&lt;timed 11s&gt;&gt;&lt;&lt;goto &quot;TGTG-5&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="TGTG-5" tags="" position="300,600" size="100,100">&lt;&lt;audio &quot;Game3&quot; stop&gt;&gt;
-&lt;&lt;audio &quot;Game4&quot; play&gt;&gt;
-&lt;&lt;audio &quot;underscore2&quot; volume 0.05 loop play&gt;&gt;
-&lt;main&gt;
-&lt;h1&gt;HOW DO YOU FEEL NOW!?&lt;/h1&gt;
+&lt;&lt;timed 11s&gt;&gt;&lt;&lt;goto &quot;TGTG-5&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="TGTG-5" tags="" position="300,600" size="100,100">&lt;&lt;audio &quot;Game3&quot; stop&gt;&gt;&lt;&lt;audio &quot;Game4&quot; play&gt;&gt;
+&lt;&lt;audio &quot;underscore2&quot; volume 0.05 loop play&gt;&gt;&lt;main&gt;&lt;div class = &quot;flex-center-container&quot;&gt;&lt;h1&gt;HOW DO YOU FEEL NOW!?&lt;/h1&gt;&lt;div class=&quot;speech padding&quot;&gt;
+TEACHER, THE FIRST QUESTION IS FOR YOU.
 
-TEACHER, THE FIRST QUESTION IS FOR YOU. ​
+HOW ARE YOU RIGHT NOW? 
 
-HOW ARE YOU RIGHT NOW? ​
+BETWEEN 1-100.
 
-BETWEEN 1-100. ​
-
-100 being the MOST incredible you have ever felt in your life ​
+100 being the MOST incredible you have ever felt in your life.
 
 1 being the LOWEST you have every felt in your life.
 
+&lt;/div&gt;
+
 &lt;&lt;button &quot;NEXT&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-6&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;/div&gt;
 
 &lt;/main&gt;
 
-</tw-passagedata><tw-passagedata pid="7" name="TGTG-6" tags="" position="300,725" size="100,100">&lt;&lt;audio &quot;Game4&quot; stop&gt;&gt;&lt;&lt;audio &quot;Game5&quot; play&gt;&gt;
+</tw-passagedata><tw-passagedata pid="7" name="TGTG-6" tags="" position="300,725" size="100,100">&lt;&lt;audio &quot;Game4&quot; stop&gt;&gt;&lt;&lt;audio &quot;Game5&quot; play&gt;&gt;&lt;main&gt;
 
-&lt;main&gt;
-GOOD – now we know what number they are – we can see if we can change that number – can we make that number go up! ​
+&lt;div class = &quot;flex-center-container&quot;&gt;&lt;div class=&quot;speech padding&quot;&gt;GOOD – now we know what number they are – we can
+see if we can change that number – can we make that
+number go up? 
 
-We have 5 rounds. ​
+We have 5 rounds. 
 
-In 5 rounds we will find out. ​
+In 5 rounds we will find out. 
 
 Does the number go up or down?
-
+&lt;/div&gt;
 &lt;&lt;button &quot;NEXT&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-7&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
-
+&lt;/div&gt;
 &lt;/main&gt;
 
-</tw-passagedata><tw-passagedata pid="8" name="TGTG-7" tags="" position="300,850" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Round1.1&quot; play&gt;&gt;
-&lt;&lt;audio &quot;titleUnderscore&quot; volume 0.05 fadeout&gt;&gt;
-
-&lt;main&gt;
-ROUND 1 -  TEACHER YOU ARE SO FUNNY
-
-&lt;&lt;timed 5s&gt;&gt;&lt;&lt;goto &quot;TGTG-8&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+</tw-passagedata><tw-passagedata pid="8" name="TGTG-7" tags="" position="300,850" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;orange&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;titleUnderscore2&quot; fadeout&gt;&gt;&lt;main&gt;
+&lt;img class=&quot;cat&quot; src=&quot;https://www.dropbox.com/s/7sxq02vm25u0kme/cat.png?dl=1&quot;&gt;
+&lt;&lt;timed 5s&gt;&gt;
+  &lt;&lt;audio &quot;Round1.1&quot; play&gt;&gt;
+ &lt;div class = &quot;flex-center-container&quot;&gt;&lt;h1&gt;ROUND 1 -  TEACHER YOU ARE SO FUNNY&lt;/h1&gt;&lt;/div&gt;
+&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
+&lt;&lt;timed 9s&gt;&gt;&lt;&lt;goto &quot;TGTG-8&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="9" name="TGTG-9" tags="" position="300,1100" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Round1.3&quot; play&gt;&gt;
+</tw-passagedata><tw-passagedata pid="9" name="TGTG-9" tags="" position="300,1100" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;orange&quot;&gt;&gt;
+&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Round1.3&quot; play&gt;&gt;
 
-&lt;main&gt;
+&lt;main class=&quot;flex-center-container speech padding&quot;&gt;
 Do you want to have a try first...? ​
 We&#39;ll do a fake laugh in 3-2-1 
 
-&lt;&lt;timed 10s&gt;&gt;&lt;&lt;goto &quot;TGTG-10&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 12s&gt;&gt;&lt;&lt;goto &quot;TGTG-10&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
 
-</tw-passagedata><tw-passagedata pid="10" name="TGTG-8" tags="" position="300,975" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Round1.2&quot; play&gt;&gt;
+</tw-passagedata><tw-passagedata pid="10" name="TGTG-8" tags="" position="300,975" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;orange&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Round1.2&quot; play&gt;&gt;
 
-&lt;main&gt;
-Most teachers like when you laugh at their jokes. ​
-Even if they are really really really really not funny. ​
-So, to win this game you need to do that. ​
-You just need to laugh. ​
-Teacher, you get to tell your best joke and students you just need to do a fake laugh. ​
+&lt;main class=&quot;flex-center-container speech padding&quot;&gt;
+Most teachers like when you laugh at their jokes. 
+Even if they are really really really really not funny. 
+So, to win this game you need to do that. 
+You just need to laugh. 
+Teacher, you get to tell your best joke and students you just need to do a fake laugh. 
 Like this:
-
 &lt;&lt;timed 28s&gt;&gt;&lt;&lt;goto &quot;TGTG-9&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
-
 &lt;/main&gt;
-</tw-passagedata><tw-passagedata pid="11" name="TGTG-10" tags="" position="300,1225" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Round1.5&quot; play&gt;&gt;
-&lt;main&gt;
-Ok...here we go. ​
-Teacher when you are ready for your joke – GO!​
+</tw-passagedata><tw-passagedata pid="11" name="TGTG-10" tags="" position="300,1225" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;orange&quot;&gt;&gt;
+&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Round1.5&quot; play&gt;&gt;
+&lt;main class=&quot;flex-center-container&quot;&gt;
+Ok...here we go. 
+Teacher when you are ready for your joke – GO!
 Teacher, if you feel they were believable at laughing at your joke, then click complete. 
 
 &lt;&lt;button &quot;COMPLETE&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-11&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
 
-</tw-passagedata><tw-passagedata pid="12" name="TGTG-11" tags="" position="300,1350" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Round2.1&quot; play&gt;&gt;
-&lt;&lt;audio &quot;titleUnderscore&quot; volume 0.05 fadeout&gt;&gt;
-&lt;main&gt;
-ROUND 2 - COMPLIMENT BINGO​
+</tw-passagedata><tw-passagedata pid="12" name="TGTG-11" tags="" position="300,1350" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
+&lt;&lt;audio &quot;titleUnderscore2&quot;  fadeout&gt;&gt;
+
+&lt;main class=&quot;flex-center-container&quot;&gt;
+&lt;&lt;timed 5s&gt;&gt;
+  &lt;&lt;audio &quot;Round2.1&quot; play&gt;&gt;
+  ROUND 2 - COMPLIMENT BINGO
+&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 
-&lt;&lt;timed 5s&gt;&gt;&lt;&lt;goto &quot;TGTG-12&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="TGTG-12" tags="" position="300,1475" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Round2.2&quot; play&gt;&gt;
-
-&lt;main&gt;
-Teacher, in your pack is a Bingo card.​
-
-Class, you cannot see the Bingo Card. ​
-
-However, you need to help the Teacher complete the Bingo card by giving them a compliment​
-
-E.g. Thanks for the lesson today OR you have nice hair. ​
-
-Put your hand up and if the compliment is on the list then we can tick it off. ​
-
-They have to be real compliments though! ​
-
+&lt;&lt;timed 10s&gt;&gt;&lt;&lt;goto &quot;TGTG-12&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="TGTG-12" tags="" position="300,1475" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Round2.2&quot; play&gt;&gt;
+&lt;main class=&quot;flex-center-container&quot;&gt;&lt;div  class=&quot;flex-rows-align&quot;&gt;
+&lt;div class=&quot; speech padding&quot;&gt;
+Teacher, in your pack is a Bingo card.
+Class, you cannot see the Bingo Card. 
+However, you need to help the Teacher complete the Bingo card by giving them a compliment
+E.g. Thanks for the lesson today OR you have nice hair. 
+Put your hand up and if the compliment is on the list then we can tick it off. 
+They have to be real compliments though! 
 Teacher, when you have line shout BINGO and click it too!
-​
+
+&lt;/div&gt;
+&lt;img class=&quot;padding&quot; src=&quot;https://www.dropbox.com/s/y8jwa2wf480j8db/bingo.PNG?dl=1&quot;&gt;
+&lt;/div&gt;
 &lt;&lt;button &quot;BINGO&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-13&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
 
 
-</tw-passagedata><tw-passagedata pid="14" name="TGTG-13" tags="" position="300,1600" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Round3.1&quot; play&gt;&gt;
-&lt;&lt;audio &quot;titleUnderscore&quot; volume 0.05 fadeout&gt;&gt;
-&lt;main&gt;
-ROUND 3 - 10 SUCCESSES
+</tw-passagedata><tw-passagedata pid="14" name="TGTG-13" tags="" position="300,1600" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;lightblue&quot;&gt;&gt;
+&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
+&lt;&lt;audio &quot;titleUnderscore2&quot; fadeout&gt;&gt;
+
+&lt;main class=&quot;flex-center-container&quot;&gt;
+&lt;&lt;timed 5s&gt;&gt;
+  &lt;&lt;audio &quot;Round3.1&quot; play&gt;&gt;
+ &lt;h1&gt;ROUND 3 - 10 SUCCESSES&lt;/h1&gt;
+&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 
+&lt;&lt;timed 10s&gt;&gt;&lt;&lt;goto &quot;TGTG-14&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+</tw-passagedata><tw-passagedata pid="15" name="TGTG-14" tags="" position="300,1725" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;lightblue&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Round3.2&quot; play&gt;&gt;
 
-
-&lt;&lt;timed 5s&gt;&gt;&lt;&lt;goto &quot;TGTG-14&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="TGTG-14" tags="" position="300,1725" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Round3.2&quot; play&gt;&gt;
-
-&lt;main&gt;
+&lt;main class=&quot;flex-center-container&quot;&gt;
 The target of a teacher is to help you learn. They spend all day at it!
 &lt;/main&gt;
 
-&lt;&lt;timed 5s&gt;&gt;&lt;&lt;goto &quot;TGTG-15&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="TGTG-15" tags="" position="300,1850" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Round3.3&quot; play&gt;&gt;
+&lt;&lt;timed 5s&gt;&gt;&lt;&lt;goto &quot;TGTG-15&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="TGTG-15" tags="" position="300,1850" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;lightblue&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Round3.3&quot; play&gt;&gt;
 
-&lt;main&gt;
-They may help you learn how to spell, your times table, what makes you smile, that the world isn&#39;t over until it&#39;s actually over, to put your coat on at the end of the day, how to keep your clothes clean, to not fall over in puddles…​
+&lt;main class=&quot;flex-center-container padding&quot;&gt;
+They may help you learn how to spell, learn your times table, what makes you smile, that the world isn&#39;t over until it&#39;s actually over, to put your coat on at the end of the day, how to keep your clothes clean, to not fall in puddles…
 
-When they hear what you’ve learnt it charges them up. ​
+When they hear what you’ve learnt it charges them up. 
 &lt;/main&gt;
 
-&lt;&lt;timed 21s&gt;&gt;&lt;&lt;goto &quot;TGTG-16&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="TGTG-16" tags="" position="300,1975" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Round3.4&quot; play&gt;&gt;
+&lt;&lt;timed 21s&gt;&gt;&lt;&lt;goto &quot;TGTG-16&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="TGTG-16" tags="" position="300,1975" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;lightblue&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Round3.4&quot; play&gt;&gt;
+&lt;main class=&quot;flex-center-container padding&quot;&gt;
+So, for this game we need 10 successes. 
+10 things you have learnt
+Either as a class OR on your own
+Thanks to the teacher. 
+Can you get all 10? 
+Oh…did we not mention You have 60 seconds to complete this? Click Go to start the clock.
 
-&lt;main&gt;
-So, for this game we need 10 successes. ​
-
-10 things you have learnt​
-
-Either as a class OR on your own​
-
-Thanks to the teacher. ​
-
-Can you get all 10? ​
-
-Oh…did we not mention You have 60 seconds to complete this? Click Go to start the clock.​
 &lt;&lt;button &quot;GO&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-17&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
-</tw-passagedata><tw-passagedata pid="18" name="TGTG-17" tags="" position="300,2100" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
-&lt;main&gt;
+</tw-passagedata><tw-passagedata pid="18" name="TGTG-17" tags="" position="300,2100" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;lightblue&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Round3.4&quot; play&gt;&gt;
+&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
+&lt;main class=&quot;flex-center-container&quot;&gt;
 &lt;div class=&quot;countdown&quot;&gt;60&lt;/div&gt;
 &lt;&lt;button &quot;Finished!&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-18&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
 
 &lt;&lt;set $seconds to 60&gt;&gt;
+&lt;&lt;silently&gt;&gt;
 	&lt;&lt;repeat 1s&gt;&gt;
 		&lt;&lt;set $seconds to $seconds - 1&gt;&gt;
-		&lt;&lt;if $seconds gt 0&gt;&gt;
+		&lt;&lt;if $seconds gt -1&gt;&gt;
 			&lt;&lt;replace &quot;.countdown&quot;&gt;&gt;$seconds&lt;&lt;/replace&gt;&gt;
 		&lt;&lt;else&gt;&gt;
 			&lt;&lt;replace &quot;.next&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;
 			&lt;&lt;audio &quot;alarm&quot; play&gt;&gt;
+            Time&#39;s up!
 			&lt;&lt;stop&gt;&gt;
 		&lt;&lt;/if&gt;&gt;
 	&lt;&lt;/repeat&gt;&gt;
-</tw-passagedata><tw-passagedata pid="19" name="TGTG-18" tags="" position="300,2225" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Round3.5&quot; play&gt;&gt;
-&lt;main&gt;
+  &lt;&lt;/silently&gt;&gt;  
+</tw-passagedata><tw-passagedata pid="19" name="TGTG-18" tags="" position="300,2225" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;lightblue&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Round3.5&quot; play&gt;&gt;
+&lt;main class=&quot;flex-center-container&quot;&gt;
 Did you get 10?
 
+&lt;div class = &quot;flex-rows-align&quot;&gt;
 &lt;&lt;button &quot;YES&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-19&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
-
 &lt;&lt;button &quot;CLOSE&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-19&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
-
+&lt;/div&gt;
 &lt;/main&gt;
 
 
 
 
-</tw-passagedata><tw-passagedata pid="20" name="TGTG-19" tags="" position="300,2350" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;round4&quot; play&gt;&gt;
-&lt;&lt;audio &quot;titleUnderscore&quot; volume 0.05 fadeout&gt;&gt;
-&lt;main&gt;
-ROUND 4: DISNEY TIDY TIME
+</tw-passagedata><tw-passagedata pid="20" name="TGTG-19" tags="" position="300,2350" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
+&lt;&lt;audio &quot;titleUnderscore2&quot; fadeout&gt;&gt;
+
+&lt;main class=&quot;flex-center-container&quot;&gt;
+&lt;&lt;timed 5s&gt;&gt;
+  &lt;&lt;audio &quot;round4&quot; play&gt;&gt;
+  &lt;h1&gt;ROUND 4: DISNEY TIDY TIME&lt;/h1&gt;
+&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 
-&lt;&lt;timed 5s&gt;&gt;&lt;&lt;goto &quot;TGTG-20&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
-
+&lt;&lt;timed 10s&gt;&gt;&lt;&lt;goto &quot;TGTG-20&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 </tw-passagedata><tw-passagedata pid="21" name="TGTG-20" tags="" position="300,2475" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;round4.1&quot; play&gt;&gt;
-
-&lt;main&gt;
-Teachers love Disney (we’ve been told)​
-
-They also love tidy rooms (we know)​
-
-So, this game is a Disney Tidy Challenge. ​
-
-Teacher, you have 3 Disney songs to choose from. ​
-
-Before you choose you can decide what needs tidying​
-
-Maybe everyone just cleans their desks​
-
-Or maybe you want specific areas tidied​
-
-Or maybe it is already clean, and you just want to listen to a Disney Song for 120seconds. ​
-
-Class, you need to tidy the room to a standard that makes the teacher happy. ​
+&lt;main class=&quot;flex-center-container padding&quot;&gt;
+Teachers love Disney (we’ve been told)
+They also love tidy rooms (we know)
+So, this game is a Disney Tidy Challenge. 
+Teacher, you have 3 Disney songs to choose from. 
+Before you choose you can decide what needs tidying
+Maybe everyone just cleans their desks
+Or maybe you want specific areas tidied
+Or maybe it is already clean, and you just want to listen to a Disney Song for 120seconds. 
+Class, you need to tidy the room to a standard that makes the teacher happy. 
 
 &lt;&lt;button &quot;NEXT&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-21&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;/main&gt;
 
 
-</tw-passagedata><tw-passagedata pid="22" name="TGTG-21" tags="" position="300,2600" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;round4.2&quot; play&gt;&gt;
+</tw-passagedata><tw-passagedata pid="22" name="TGTG-21" tags="" position="300,2600" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;round4.2&quot; play&gt;&gt;&lt;&lt;set $tidySong to &quot;&quot;&gt;&gt;&lt;main class = &quot;flex-center-container padding&quot;&gt;
+Ready to tidy?
+Which song would you like?
 
-&lt;main&gt;
-Ready to tidy?​
-
-Which song would you like? 
-
-
-
-SONG 1:
-&lt;&lt;button &quot;SHINY- MOANA&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-22&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
-
+&lt;p&gt;SONG 1:&lt;/p&gt;&lt;&lt;button &quot;SHINY- MOANA&quot;&gt;&gt;
+  &lt;&lt;set $tidySong to &quot;shiny&quot;&gt;&gt;
+  &lt;&lt;goto &quot;TGTG-22&quot;&gt;&gt;
+&lt;&lt;/button&gt;&gt;
 SONG 2:
-&lt;&lt;button &quot;HAKUNA MATATA - LION KING&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-22&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
-
+&lt;&lt;button &quot;HAKUNA MATATA - LION KING&quot;&gt;&gt;
+  &lt;&lt;set $tidySong to &quot;hakunaMatata&quot;&gt;&gt;
+  &lt;&lt;goto &quot;TGTG-22&quot;&gt;&gt;
+&lt;&lt;/button&gt;&gt;
 SONG 3:
-&lt;&lt;button &quot;UNDER THE SURFACE - ENCANTO&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-22&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;WE DON&#39;T TALK ABOUT BRUNO - ENCANTO&quot;&gt;&gt;
+  &lt;&lt;set $tidySong to &quot;bruno&quot;&gt;&gt;
+  &lt;&lt;goto &quot;TGTG-22&quot;&gt;&gt;
+&lt;&lt;/button&gt;&gt;
+
+
 
 &lt;/main&gt;</tw-passagedata><tw-passagedata pid="23" name="TGTG-22" tags="" position="300,2725" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;round4.3&quot; play&gt;&gt;
-
-&lt;main&gt;
-TIDY!
+&lt;main class =&quot;flex-center-container&quot;&gt;
+&lt;h1&gt;TIDY!&lt;/h1&gt;
 &lt;div class=&quot;countdown&quot;&gt;120&lt;/div&gt;
 
+&lt;&lt;button &quot;&gt;&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-23&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;timed 3s&gt;&gt;
+&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
+&lt;&lt;if $tidySong is &quot;shiny&quot;&gt;&gt;
+	&lt;&lt;audio &quot;shiny&quot; play&gt;&gt;
+&lt;&lt;elseif $tidySong is &quot;hakunaMatata&quot;&gt;&gt;
+	&lt;&lt;audio &quot;hakunaMatata&quot; play&gt;&gt;
+&lt;&lt;else&gt;&gt;
+	&lt;&lt;audio &quot;bruno&quot; play&gt;&gt;
+&lt;&lt;/if&gt;&gt;
 &lt;&lt;set $seconds to 120&gt;&gt;
+&lt;&lt;silently&gt;&gt;
 	&lt;&lt;repeat 1s&gt;&gt;
 		&lt;&lt;set $seconds to $seconds - 1&gt;&gt;
-		&lt;&lt;if $seconds gt 0&gt;&gt;
+		&lt;&lt;if $seconds gt -1&gt;&gt;
 			&lt;&lt;replace &quot;.countdown&quot;&gt;&gt;$seconds&lt;&lt;/replace&gt;&gt;
 		&lt;&lt;else&gt;&gt;
+        	&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 			&lt;&lt;audio &quot;alarm&quot; play&gt;&gt;
+            Time&#39;s up!
             &lt;&lt;timed 5s&gt;&gt;&lt;&lt;goto &quot;TGTG-23&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 			&lt;&lt;stop&gt;&gt;
 		&lt;&lt;/if&gt;&gt;
 	&lt;&lt;/repeat&gt;&gt;
-    
+ &lt;&lt;/silently&gt;&gt;
+ &lt;&lt;/timed&gt;&gt;   
 &lt;/main&gt;
 
 
-</tw-passagedata><tw-passagedata pid="24" name="TGTG-23" tags="" position="300,2850" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;round5.1&quot; play&gt;&gt;
-&lt;&lt;audio &quot;titleUnderscore&quot; volume 0.05 fadeout&gt;&gt;
+</tw-passagedata><tw-passagedata pid="24" name="TGTG-23" tags="" position="300,2850" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
+&lt;&lt;audio &quot;titleUnderscore2&quot; fadeout&gt;&gt;
 &lt;main&gt;
-ROUND 5 - MAKE THEM LAUGH
+&lt;&lt;timed 5s&gt;&gt;
+&lt;&lt;audio &quot;round5.1&quot; play&gt;&gt;
+  &lt;div class=&quot;flex-rows-align&quot;&gt;  
+    &lt;h1&gt;ROUND 5 - MAKE THEM LAUGH&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 
-&lt;&lt;timed 5s&gt;&gt;&lt;&lt;goto &quot;TGTG-24&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="TGTG-24" tags="" position="300,2975" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;round5.2&quot; play&gt;&gt;
-&lt;main&gt;
-Teachers love a good laugh​
-
-At the right time of course​
-
-They like focus too​
-
-But if you can get them at the right moment,​
-
-And make them laugh,​
-
-It is pure joy. ​
-
+&lt;&lt;timed 10s&gt;&gt;&lt;&lt;goto &quot;TGTG-24&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+</tw-passagedata><tw-passagedata pid="25" name="TGTG-24" tags="" position="300,2975" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;round5.2&quot; play&gt;&gt;
+&lt;main class = &quot;flex-center-container&quot;&gt;
+Teachers love a good laugh
+At the right time of course
+They like focus too
+But if you can get them at the right moment,
+And make them laugh,
+It is pure joy. 
 Now is that moment. 
-
 &lt;/main&gt;
 
 &lt;&lt;timed 14s&gt;&gt;&lt;&lt;goto &quot;TGTG-25&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 </tw-passagedata><tw-passagedata pid="26" name="TGTG-25" tags="" position="300,3100" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;round5.3&quot; play&gt;&gt;
-
-&lt;main&gt;
-
+&lt;main class=&quot;flex-center-container&quot;&gt;
 Teacher, I need you to be in the front of the class looking angry, annoyed or mean! ​
-
 Only the teacher can choose who will speak to them. ​
-
 Students, you have 90 seconds to turn that frown upside down with your best joke
 
 &lt;&lt;button &quot;GO&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-26&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;/main&gt;</tw-passagedata><tw-passagedata pid="27" name="TGTG-26" tags="" position="300,3225" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 
-&lt;main&gt;
+&lt;main class=&quot;flex-center-container&quot;&gt;
 &lt;div class=&quot;countdown&quot;&gt;&lt;/div&gt;
 &lt;&lt;button &quot;NEXT&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-27&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
 
 &lt;&lt;set $seconds to 90&gt;&gt;
+	&lt;&lt;silently&gt;&gt;
 	&lt;&lt;repeat 1s&gt;&gt;
 		&lt;&lt;set $seconds to $seconds - 1&gt;&gt;
 		&lt;&lt;if $seconds gt 0&gt;&gt;
@@ -905,24 +823,18 @@ Students, you have 90 seconds to turn that frown upside down with your best joke
 			&lt;&lt;stop&gt;&gt;
 		&lt;&lt;/if&gt;&gt;
 	&lt;&lt;/repeat&gt;&gt;
+    &lt;&lt;/silently&gt;&gt;
+    
+    
 
 
 
-</tw-passagedata><tw-passagedata pid="28" name="TGTG-27" tags="" position="300,3350" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;HDYF2&quot; play&gt;&gt;
-&lt;&lt;audio &quot;underscore2&quot; volume 0.05 loop play&gt;&gt;
-
-&lt;main&gt;
-
+</tw-passagedata><tw-passagedata pid="28" name="TGTG-27" tags="" position="300,3350" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;HDYF2&quot; play&gt;&gt;&lt;&lt;audio &quot;underscore2&quot; volume 0.05 loop play&gt;&gt;&lt;main class=&quot;flex-center-container&quot;&gt;
 &lt;h1&gt;HOW DO THEY FEEL NOW?&lt;/h1&gt;
-
-TEACHER, THE LAST QUESTION IS FOR YOU. ​
-
-HOW ARE YOU RIGHT NOW? ​​
-
-BETWEEN 1-100. ​
-
-100 being the MOST incredible you have ever felt in your life ​
-
+TEACHER, THE LAST QUESTION IS FOR YOU. 
+HOW ARE YOU RIGHT NOW? 
+BETWEEN 1-100. 
+100 being the MOST incredible you have ever felt in your life 
 1 being the LOWEST you have every felt in your life. 
 
 &lt;&lt;button &quot;NEXT&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-28&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
@@ -932,46 +844,40 @@ BETWEEN 1-100. ​
 
 </tw-passagedata><tw-passagedata pid="29" name="TGTG-28" tags="" position="300,3475" size="100,100">&lt;&lt;audio &quot;HDYF2&quot; stop&gt;&gt;&lt;&lt;audio &quot;HDYF3&quot; play&gt;&gt;
 
-&lt;main&gt;
-
+&lt;main class=&quot;flex-center-container&quot;&gt;
 Did the number go up or down?
 
+&lt;div class=&quot;flex-rows-align&quot;&gt;
 &lt;&lt;button &quot;UP&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-29A&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;button &quot;DOWN&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-29B&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;/div&gt;
 &lt;/main&gt;
 
 
-</tw-passagedata><tw-passagedata pid="30" name="TGTG-29A" tags="" position="225,3600" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;fanfare&quot; play&gt;&gt;
+</tw-passagedata><tw-passagedata pid="30" name="TGTG-29A" tags="" position="225,3600" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;end&quot;&gt;&gt;
+&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;fanfare&quot; play&gt;&gt;
 &lt;&lt;audio &quot;underscore1&quot; volume 0.05 loop play&gt;&gt;
 
-&lt;main&gt;CONGRATULATIONS!&lt;/main&gt;
+&lt;main class=&quot;flex-center-container&quot;&gt;&lt;h1&gt;CONGRATULATIONS!&lt;/h1&gt;&lt;/main&gt;
 
-&lt;&lt;timed 5s&gt;&gt;&lt;&lt;goto TGTG-30&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="TGTG-29B" tags="" position="375,3600" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;underscore1&quot; volume 0.05 loop play&gt;&gt;
-&lt;main&gt;OH NO - BETTER TRY AGAIN!&lt;/main&gt;</tw-passagedata><tw-passagedata pid="32" name="TGTG-30" tags="" position="300,3725" size="100,100">&lt;&lt;audio &quot;Reward&quot; play&gt;&gt;
-&lt;&lt;audio &quot;underscore1&quot; volume 0.02 loop play&gt;&gt;
-
-&lt;main&gt;
-&lt;h1&gt;REWARD&lt;/h1&gt;
-
-Teachers like when you are smiling​
-
-Not just at their jokes​
-
-But when you smile as you are happy. ​
-
-So, we have a game for you to play class. ​
-
-Teacher, this game takes 10 minutes, so you can come play now or come back to it later. ​
-
-It is a drawing game. ​
-
-A game to make you all smile. ​
-
-Thanks for playing our game.​
-
-Congratulations Teacher. ​
-
+&lt;&lt;timed 5s&gt;&gt;&lt;&lt;goto TGTG-30&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="TGTG-29B" tags="" position="375,3600" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;end&quot;&gt;&gt;
+&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;underscore1&quot; volume 0.05 loop play&gt;&gt;
+&lt;main class=&quot;flex-center-container&quot;&gt;&lt;h1&gt;OH NO - BETTER TRY AGAIN!&lt;/h1&gt;&lt;/main&gt;
+&lt;&lt;timed 5s&gt;&gt;&lt;&lt;goto TGTG-30&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="TGTG-30" tags="" position="300,3725" size="100,100">&lt;&lt;audio &quot;Reward&quot; play&gt;&gt;&lt;&lt;audio &quot;underscore1&quot; volume 0.02 loop play&gt;&gt;&lt;main class=&quot;flex-rows-align padding&quot;&gt;
+&lt;div class=&quot;flex-center-container padding&quot;&gt;
+&lt;h1&gt;REWARD&lt;/h1&gt;Teachers like when you are smiling
+Not just at their jokes
+But when you smile as you are happy. 
+So, we have a game for you to play class. 
+Teacher, this game takes 10 minutes, 
+so you can come play now or come back to it later. 
+It is a drawing game. 
+A game to make you all smile. 
+Thanks for playing our game.
+Congratulations Teacher. 
 You did FAB.
+&lt;/div&gt;
+&lt;img class=&quot;fold&quot; src=&quot;https://www.dropbox.com/s/z20t2key4jl66tx/fold.gif?dl=1&quot;&gt;
 
 &lt;/main&gt;
 

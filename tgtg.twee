@@ -14,6 +14,7 @@ The Great Teacher Game
 
 :: Story Stylesheet [stylesheet]
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 
 /* GENERICS */
 html {
@@ -153,16 +154,25 @@ button * {
 	content: "";
 }
 
+
+
+
 button{
-    background-color: transparent;
+    background-color: #38b698;
     border: #fff 1px solid;
     border-radius: 3px;
+  	height: 3em;
+  	width: 8em;
+  	font-size: 1.5em;
+    padding: 0.5em;
+ 	width: fit-content;
+  	height: fit-content;
 }
 
 button:hover{
 	background-color:#ea9e25;
-	border: #fff 1px solid;
-	color: #fff;
+	border: #ffffff 1px solid;
+	color: #ffffff;
 }
 
 a {
@@ -187,185 +197,90 @@ a:hover {
 
 /* GENERAL STYLES */
 body{
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-weight: 600;
-  font-family: "Space Grotesk";
-  color:#fff;
+  font-family: 'Pangolin', cursive;
+  color:black;
   /* color:#000; */
   overflow:scroll;
-  background:#188081;
+  background:#d5f2eb;
   /* padding: 1.5rem */
   display:flex;
   flex-direction: column
 }
 
-header{
-  display:flex;
-  justify-content: flex-end;
-  align-items: center;
-    padding: 2rem
+h1, p{
+color: black;
+ 
 }
+
 main{
-   padding: 2rem;
-   margin-block-end: 10rem
+   padding: 0px;
+   margin-block-end: 10rem;
+   justify-content:   center;
 }
 
-input[type=text]{
-  border: 1px solid #fff
+.orange{
+background-color:#e5b494;
 }
-/* FOOTER  */
-
-footer{
-   display:flex;
-  justify-content: space-between;
-align-items: end;
-  position:fixed;
-  bottom: 0;
-  padding: 2rem;
-  width: 100%;
-background: #188081;
+.lightblue{
+background-color:#d5eef5;
 }
 
-nav{
+#teacherIcon{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 250px;
+}
+
+#start-top{
+background-color: #ffffff;
+}
+
+.flex-center-container{
   display:flex;
-    justify-content: space-between;
-}
-
-.nav-wrapper{
-display:flex;
+  justify-content:center;
+  align-items:center;
   flex-direction:column;
-align-items: flex-start
 }
-
-.nav-wrapper:last-child{
-align-items: flex-end
-}
-
-.nav-item{
-  margin-block-end: 0.5rem;
-  width:100%;
-  display:flex
-}
-
-.nav-item.replay, .nav-item.end{
-justify-content: center
-}
-.nav-item.replay, .nav-item.forward{
-justify-content: end
-}
-
-.nav-item.replay, .nav-item.back{
-justify-content: start
-}
-
-.nav-item.forward > button, 
-.nav-item.back > button{
-  font-size:2rem
-}
-footer > button:first-child,  {
-  font-size:2rem
-}
-
-.nav-item > button{
- font-size: 1.3rem
-}
-
-.menu-wrapper{
-  display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.menu-wrapper > button{
-margin-inline-end: 10px;
-margin-block-end: 10px
-}
-
-
-textarea{
-  min-width: 60vw
-}
-
-.wordcontainer{
+.flex-rows-align{
   display:flex;
-  flex-direction: row;
+  justify-content:center;
+  align-items:center;
+}
+.padding{
+padding:20px;
 }
 
-.letter-item > input[type=text]{
-    min-width: 2em;
-  	max-width: 2em;
-  	margin-inline-end:10px;
+.speech{
+  background-color: #ffffff;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 4px;
+  border: 2px solid black;
 }
 
-.letter-item > .correct-letter{
-  min-width: 2em;
-  	max-width: 2em;
-  	margin-inline-end:10px;
+.end{
+background-image: url("https://www.dropbox.com/s/u5hls2fypyhnl3d/celebrate.PNG?dl=1");
+    background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-
-
-
-@keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
+.countdown{
+font-size:4rem;
 }
 
-
-/* MAP */
-	.map{
-width: 100%;
-    height: 60vh;
-    border: 0;
-    margin: auto;
-    }
-
-
-.directions-card {
-    display: none!important
+.laugh-right{
+background-color:#ffffff;
 }
 
-@media screen and (min-width: 450px) {
-.map{
-	max-width:60vw;
-	height:50vh;
-	border:0
-}
+.cat{
+height:80%;
 }
 
-/* SPECIFICS */
-
-.dropdown-wrapper{
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-between;
-}
-
-.wrong {
-  color:#f6cbc0;
-}
-
-.question{
-  border: 1px solid #fff;
-    padding: 10px;
-}
-
-input[type=text], select{
-  border: 1px solid #fff
-}
-
-input[type=text]{
-  min-width: 60%
-}
-
-h2.title{
-  font-size:2.5rem
+.fold{
+width:40%;
 }
 
 
@@ -435,15 +350,13 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: TGTG-1 {"position":"300,100","size":"100,100"}
-<main>
-
-THE GREAT TEACHER GAME
-
-A game FOR teachers, to play with their class
-
-<<button "START">>
+<main id="start"><div id="start-top">
+  <img id="teacherIcon" src="https://www.dropbox.com/s/i18umpdkej5jtlb/teacherIcon.PNG?dl=1">
+</div><div class="flex-center-container">
+<h1>THE GREAT TEACHER GAME</h1><p class>A game FOR teachers, to play with their class</p><<button "START">>
   <<goto "TGTG-2">>
 <</button>>
+</div>
 
 </main>
 
@@ -452,31 +365,19 @@ A game FOR teachers, to play with their class
 <<audio ":all" stop>><<audio "Game1" play>>
 <<audio "underscore1" volume 0.05 loop play>>
 <main>
-
-Welcome to the Great Teacher Game. ​
-Class you are needed.​
-You decide the fate of your teacher.​
-Without you the teacher is not a teacher…​
-They are just a regular human being with lots of pens!
-
+<div class = "flex-center-container speech" >
+<p>Welcome to the Great Teacher Game.</p><p>Class you are needed.</p><p>You decide the fate of your teacher.</p><p>Without you the teacher is not a teacher…</p><p>They are just a regular human being with lots of pens!</p>
+</div>
 <<timed 15s>><<goto "TGTG-3">><</timed>>
-
-
 </main>
 
 
 :: TGTG-3 {"position":"300,350","size":"100,100"}
 <<audio "Game1" stop>>
 <<audio "Game2" play>>
-
-
-<main>
-Today you are needed to help your teacher​
-Your actions will decide something very important today. ​
-Your actions will decide...​
-How your teacher FEEEEEEEEEELS!​
-Complete the challenges and the teacher will feel fab. ​
-If you fail, they may need a strawberry trifle with lots of cream on top. 
+<main><div class="flex-center-container speech">
+<p>Today you are needed to help your teacher</p><p>Your actions will decide something very important today. </p><p>Your actions will decide...</p><p>How your teacher FEEEEEEEEEELS!</p><p>Complete the challenges and the teacher will feel fab. </p><p>If you fail, they may need a strawberry trifle with lots of cream on top.</p>
+</div>
 </main>
 
 <<timed 17s>><<goto "TGTG-4">><</timed>>
@@ -484,7 +385,7 @@ If you fail, they may need a strawberry trifle with lots of cream on top.
 
 :: StoryInit {"position":"100,100","size":"100,100"}
 <<cacheaudio "Game1" "https://www.dropbox.com/s/pehmvas54kvpf1l/Game1.mp3?dl=1">>
-<<cacheaudio "Game2" "https://www.dropbox.com/s/9qvjymz58adefbh/Game2.mp3?dl=1">>
+<<cacheaudio "Game2" "https://www.dropbox.com/s/2uuo1ylo4o9nnw5/Game2.mp3?dl=1">>
 
 <<cacheaudio "Game3" "https://www.dropbox.com/s/2h7xr7bb4h1aawe/Game3.mp3?dl=1">>
 <<cacheaudio "Game4" "https://www.dropbox.com/s/zqmr94otxnd7mnx/Game4.mp3?dl=1">>
@@ -513,15 +414,20 @@ If you fail, they may need a strawberry trifle with lots of cream on top.
 
 <<cacheaudio "round5.1" "https://www.dropbox.com/s/qxfsd020n0x7y95/round5.1.mp3?dl=1" >>
 <<cacheaudio "round5.2" "https://www.dropbox.com/s/6gtvgc8pc4fhsro/round5.2.mp3?dl=1" >>
-<<cacheaudio "round5.3" "https://www.dropbox.com/s/q86jh0n7nrw31g2/round5.3.mp3?dl=1" >>
+<<cacheaudio "round5.3" "https://www.dropbox.com/s/d1i586ngdoza9r4/round5.3.mp3?dl=1" >>
 <<cacheaudio "underscore1" "https://www.dropbox.com/s/ruln2cdpcw6ayeu/underscore%201.mp3?dl=1" >>
 <<cacheaudio "underscore2" "https://www.dropbox.com/s/qecki3vo6ly9ird/underscore%202.mp3?dl=1" >>
 
 <<cacheaudio "titleUnderscore" "https://www.dropbox.com/s/4sozah6p6bpo5d3/titleUnderscore.mp3?dl=1" >>
+<<cacheaudio "titleUnderscore2" "https://www.dropbox.com/s/v2pdd7dwt5ngun8/titleunderscore2.mp3?dl=1" >>
 
 <<cacheaudio "alarm" "https://www.dropbox.com/s/wtz3b9u9egcsfy8/alarm.mp3?dl=1" >>
-
 <<cacheaudio "fanfare" "https://www.dropbox.com/s/u4pa1hyev4k0ic5/fanfare.mp3?dl=1" >>
+
+<<cacheaudio "shiny" "https://www.dropbox.com/s/knm60ha7267y13o/shiny.mp3?dl=1" >>
+<<cacheaudio "hakunaMatata" "https://www.dropbox.com/s/agcri46ksewflk8/hakunaMatata.mp3?dl=1" >>
+<<cacheaudio "bruno" "https://www.dropbox.com/s/gatpok0aa5nnbuf/bruno.mp3?dl=1" >>
+
 
 
 
@@ -536,98 +442,97 @@ If you fail, they may need a strawberry trifle with lots of cream on top.
 <<audio "underscore1" volume 0.05 fadeoverto 10 0>>
 
 <main>
-So, let's do this class. ​
-Let's win this game. ​
-Let’s play The Great Teacher Game.
-​
+<div class="flex-center-container speech">
+<p>So, let's do this class.</p><p>Let's win this game.</p><p>Let’s play The Great Teacher Game.</p>
+</div>
 </main>
 
 <<timed 11s>><<goto "TGTG-5">><</timed>>
 
 
 :: TGTG-5 {"position":"300,600","size":"100,100"}
-<<audio "Game3" stop>>
-<<audio "Game4" play>>
-<<audio "underscore2" volume 0.05 loop play>>
-<main>
-<h1>HOW DO YOU FEEL NOW!?</h1>
+<<audio "Game3" stop>><<audio "Game4" play>>
+<<audio "underscore2" volume 0.05 loop play>><main><div class = "flex-center-container"><h1>HOW DO YOU FEEL NOW!?</h1><div class="speech padding">
+TEACHER, THE FIRST QUESTION IS FOR YOU.
 
-TEACHER, THE FIRST QUESTION IS FOR YOU. ​
+HOW ARE YOU RIGHT NOW? 
 
-HOW ARE YOU RIGHT NOW? ​
+BETWEEN 1-100.
 
-BETWEEN 1-100. ​
-
-100 being the MOST incredible you have ever felt in your life ​
+100 being the MOST incredible you have ever felt in your life.
 
 1 being the LOWEST you have every felt in your life.
 
+</div>
+
 <<button "NEXT">><<goto "TGTG-6">><</button>>
+</div>
 
 </main>
 
 
 :: TGTG-6 {"position":"300,725","size":"100,100"}
-<<audio "Game4" stop>><<audio "Game5" play>>
+<<audio "Game4" stop>><<audio "Game5" play>><main>
 
-<main>
-GOOD – now we know what number they are – we can see if we can change that number – can we make that number go up! ​
+<div class = "flex-center-container"><div class="speech padding">GOOD – now we know what number they are – we can
+see if we can change that number – can we make that
+number go up? 
 
-We have 5 rounds. ​
+We have 5 rounds. 
 
-In 5 rounds we will find out. ​
+In 5 rounds we will find out. 
 
 Does the number go up or down?
-
+</div>
 <<button "NEXT">><<goto "TGTG-7">><</button>>
-
+</div>
 </main>
 
 
 :: TGTG-7 {"position":"300,850","size":"100,100"}
-<<audio ":all" stop>><<audio "Round1.1" play>>
-<<audio "titleUnderscore" volume 0.05 fadeout>>
-
-<main>
-ROUND 1 -  TEACHER YOU ARE SO FUNNY
-
-<<timed 5s>><<goto "TGTG-8">><</timed>>
+<<addclass "body" "orange">><<audio ":all" stop>><<audio "titleUnderscore2" fadeout>><main>
+<img class="cat" src="https://www.dropbox.com/s/7sxq02vm25u0kme/cat.png?dl=1">
+<<timed 5s>>
+  <<audio "Round1.1" play>>
+ <div class = "flex-center-container"><h1>ROUND 1 -  TEACHER YOU ARE SO FUNNY</h1></div>
+<</timed>>
 </main>
+<<timed 9s>><<goto "TGTG-8">><</timed>>
 
 
 :: TGTG-9 {"position":"300,1100","size":"100,100"}
+<<addclass "body" "orange">>
 <<audio ":all" stop>><<audio "Round1.3" play>>
 
-<main>
+<main class="flex-center-container speech padding">
 Do you want to have a try first...? ​
 We'll do a fake laugh in 3-2-1 
 
-<<timed 10s>><<goto "TGTG-10">><</timed>>
+<<timed 12s>><<goto "TGTG-10">><</timed>>
 
 </main>
 
 
 :: TGTG-8 {"position":"300,975","size":"100,100"}
-<<audio ":all" stop>><<audio "Round1.2" play>>
+<<addclass "body" "orange">><<audio ":all" stop>><<audio "Round1.2" play>>
 
-<main>
-Most teachers like when you laugh at their jokes. ​
-Even if they are really really really really not funny. ​
-So, to win this game you need to do that. ​
-You just need to laugh. ​
-Teacher, you get to tell your best joke and students you just need to do a fake laugh. ​
+<main class="flex-center-container speech padding">
+Most teachers like when you laugh at their jokes. 
+Even if they are really really really really not funny. 
+So, to win this game you need to do that. 
+You just need to laugh. 
+Teacher, you get to tell your best joke and students you just need to do a fake laugh. 
 Like this:
-
 <<timed 28s>><<goto "TGTG-9">><</timed>>
-
 </main>
 
 
 :: TGTG-10 {"position":"300,1225","size":"100,100"}
+<<addclass "body" "orange">>
 <<audio ":all" stop>><<audio "Round1.5" play>>
-<main>
-Ok...here we go. ​
-Teacher when you are ready for your joke – GO!​
+<main class="flex-center-container">
+Ok...here we go. 
+Teacher when you are ready for your joke – GO!
 Teacher, if you feel they were believable at laughing at your joke, then click complete. 
 
 <<button "COMPLETE">><<goto "TGTG-11">><</button>>
@@ -635,53 +540,57 @@ Teacher, if you feel they were believable at laughing at your joke, then click c
 
 
 :: TGTG-11 {"position":"300,1350","size":"100,100"}
-<<audio ":all" stop>><<audio "Round2.1" play>>
-<<audio "titleUnderscore" volume 0.05 fadeout>>
-<main>
-ROUND 2 - COMPLIMENT BINGO​
+<<audio ":all" stop>>
+<<audio "titleUnderscore2"  fadeout>>
+
+<main class="flex-center-container">
+<<timed 5s>>
+  <<audio "Round2.1" play>>
+  ROUND 2 - COMPLIMENT BINGO
+<</timed>>
 </main>
 
-<<timed 5s>><<goto "TGTG-12">><</timed>>
+<<timed 10s>><<goto "TGTG-12">><</timed>>
 
 
 :: TGTG-12 {"position":"300,1475","size":"100,100"}
 <<audio ":all" stop>><<audio "Round2.2" play>>
-
-<main>
-Teacher, in your pack is a Bingo card.​
-
-Class, you cannot see the Bingo Card. ​
-
-However, you need to help the Teacher complete the Bingo card by giving them a compliment​
-
-E.g. Thanks for the lesson today OR you have nice hair. ​
-
-Put your hand up and if the compliment is on the list then we can tick it off. ​
-
-They have to be real compliments though! ​
-
+<main class="flex-center-container"><div  class="flex-rows-align">
+<div class=" speech padding">
+Teacher, in your pack is a Bingo card.
+Class, you cannot see the Bingo Card. 
+However, you need to help the Teacher complete the Bingo card by giving them a compliment
+E.g. Thanks for the lesson today OR you have nice hair. 
+Put your hand up and if the compliment is on the list then we can tick it off. 
+They have to be real compliments though! 
 Teacher, when you have line shout BINGO and click it too!
-​
+
+</div>
+<img class="padding" src="https://www.dropbox.com/s/y8jwa2wf480j8db/bingo.PNG?dl=1">
+</div>
 <<button "BINGO">><<goto "TGTG-13">><</button>>
 </main>
 
 
 :: TGTG-13 {"position":"300,1600","size":"100,100"}
-<<audio ":all" stop>><<audio "Round3.1" play>>
-<<audio "titleUnderscore" volume 0.05 fadeout>>
-<main>
-ROUND 3 - 10 SUCCESSES
+<<addclass "body" "lightblue">>
+<<audio ":all" stop>>
+<<audio "titleUnderscore2" fadeout>>
+
+<main class="flex-center-container">
+<<timed 5s>>
+  <<audio "Round3.1" play>>
+ <h1>ROUND 3 - 10 SUCCESSES</h1>
+<</timed>>
 </main>
 
-
-
-<<timed 5s>><<goto "TGTG-14">><</timed>>
+<<timed 10s>><<goto "TGTG-14">><</timed>>
 
 
 :: TGTG-14 {"position":"300,1725","size":"100,100"}
-<<audio ":all" stop>><<audio "Round3.2" play>>
+<<addclass "body" "lightblue">><<audio ":all" stop>><<audio "Round3.2" play>>
 
-<main>
+<main class="flex-center-container">
 The target of a teacher is to help you learn. They spend all day at it!
 </main>
 
@@ -689,99 +598,93 @@ The target of a teacher is to help you learn. They spend all day at it!
 
 
 :: TGTG-15 {"position":"300,1850","size":"100,100"}
-<<audio ":all" stop>><<audio "Round3.3" play>>
+<<addclass "body" "lightblue">><<audio ":all" stop>><<audio "Round3.3" play>>
 
-<main>
-They may help you learn how to spell, your times table, what makes you smile, that the world isn't over until it's actually over, to put your coat on at the end of the day, how to keep your clothes clean, to not fall over in puddles…​
+<main class="flex-center-container padding">
+They may help you learn how to spell, learn your times table, what makes you smile, that the world isn't over until it's actually over, to put your coat on at the end of the day, how to keep your clothes clean, to not fall in puddles…
 
-When they hear what you’ve learnt it charges them up. ​
+When they hear what you’ve learnt it charges them up. 
 </main>
 
 <<timed 21s>><<goto "TGTG-16">><</timed>>
 
 
 :: TGTG-16 {"position":"300,1975","size":"100,100"}
-<<audio ":all" stop>><<audio "Round3.4" play>>
+<<addclass "body" "lightblue">><<audio ":all" stop>><<audio "Round3.4" play>>
+<main class="flex-center-container padding">
+So, for this game we need 10 successes. 
+10 things you have learnt
+Either as a class OR on your own
+Thanks to the teacher. 
+Can you get all 10? 
+Oh…did we not mention You have 60 seconds to complete this? Click Go to start the clock.
 
-<main>
-So, for this game we need 10 successes. ​
-
-10 things you have learnt​
-
-Either as a class OR on your own​
-
-Thanks to the teacher. ​
-
-Can you get all 10? ​
-
-Oh…did we not mention You have 60 seconds to complete this? Click Go to start the clock.​
 <<button "GO">><<goto "TGTG-17">><</button>>
 </main>
 
 
 :: TGTG-17 {"position":"300,2100","size":"100,100"}
+<<addclass "body" "lightblue">><<audio ":all" stop>><<audio "Round3.4" play>>
 <<audio ":all" stop>>
-<main>
+<main class="flex-center-container">
 <div class="countdown">60</div>
 <<button "Finished!">><<goto "TGTG-18">><</button>>
 </main>
 
 <<set $seconds to 60>>
+<<silently>>
 	<<repeat 1s>>
 		<<set $seconds to $seconds - 1>>
-		<<if $seconds gt 0>>
+		<<if $seconds gt -1>>
 			<<replace ".countdown">>$seconds<</replace>>
 		<<else>>
 			<<replace ".next">><</replace>>
 			<<audio "alarm" play>>
+            Time's up!
 			<<stop>>
 		<</if>>
 	<</repeat>>
+  <</silently>>
 
 
 :: TGTG-18 {"position":"300,2225","size":"100,100"}
-<<audio ":all" stop>><<audio "Round3.5" play>>
-<main>
+<<addclass "body" "lightblue">><<audio ":all" stop>><<audio "Round3.5" play>>
+<main class="flex-center-container">
 Did you get 10?
 
+<div class = "flex-rows-align">
 <<button "YES">><<goto "TGTG-19">><</button>>
-
 <<button "CLOSE">><<goto "TGTG-19">><</button>>
-
+</div>
 </main>
 
 
 :: TGTG-19 {"position":"300,2350","size":"100,100"}
-<<audio ":all" stop>><<audio "round4" play>>
-<<audio "titleUnderscore" volume 0.05 fadeout>>
-<main>
-ROUND 4: DISNEY TIDY TIME
+<<audio ":all" stop>>
+<<audio "titleUnderscore2" fadeout>>
+
+<main class="flex-center-container">
+<<timed 5s>>
+  <<audio "round4" play>>
+  <h1>ROUND 4: DISNEY TIDY TIME</h1>
+<</timed>>
 </main>
 
-<<timed 5s>><<goto "TGTG-20">><</timed>>
+<<timed 10s>><<goto "TGTG-20">><</timed>>
 
 
 :: TGTG-20 {"position":"300,2475","size":"100,100"}
 <<audio ":all" stop>><<audio "round4.1" play>>
-
-<main>
-Teachers love Disney (we’ve been told)​
-
-They also love tidy rooms (we know)​
-
-So, this game is a Disney Tidy Challenge. ​
-
-Teacher, you have 3 Disney songs to choose from. ​
-
-Before you choose you can decide what needs tidying​
-
-Maybe everyone just cleans their desks​
-
-Or maybe you want specific areas tidied​
-
-Or maybe it is already clean, and you just want to listen to a Disney Song for 120seconds. ​
-
-Class, you need to tidy the room to a standard that makes the teacher happy. ​
+<main class="flex-center-container padding">
+Teachers love Disney (we’ve been told)
+They also love tidy rooms (we know)
+So, this game is a Disney Tidy Challenge. 
+Teacher, you have 3 Disney songs to choose from. 
+Before you choose you can decide what needs tidying
+Maybe everyone just cleans their desks
+Or maybe you want specific areas tidied
+Or maybe it is already clean, and you just want to listen to a Disney Song for 120seconds. 
+Class, you need to tidy the room to a standard that makes the teacher happy. 
 
 <<button "NEXT">><<goto "TGTG-21">><</button>>
 
@@ -789,76 +692,91 @@ Class, you need to tidy the room to a standard that makes the teacher happy. ​
 
 
 :: TGTG-21 {"position":"300,2600","size":"100,100"}
-<<audio ":all" stop>><<audio "round4.2" play>>
+<<audio ":all" stop>><<audio "round4.2" play>><<set $tidySong to "">><main class = "flex-center-container padding">
+Ready to tidy?
+Which song would you like?
 
-<main>
-Ready to tidy?​
-
-Which song would you like? 
-
-
-
-SONG 1:
-<<button "SHINY- MOANA">><<goto "TGTG-22">><</button>>
-
+<p>SONG 1:</p><<button "SHINY- MOANA">>
+  <<set $tidySong to "shiny">>
+  <<goto "TGTG-22">>
+<</button>>
 SONG 2:
-<<button "HAKUNA MATATA - LION KING">><<goto "TGTG-22">><</button>>
-
+<<button "HAKUNA MATATA - LION KING">>
+  <<set $tidySong to "hakunaMatata">>
+  <<goto "TGTG-22">>
+<</button>>
 SONG 3:
-<<button "UNDER THE SURFACE - ENCANTO">><<goto "TGTG-22">><</button>>
+<<button "WE DON'T TALK ABOUT BRUNO - ENCANTO">>
+  <<set $tidySong to "bruno">>
+  <<goto "TGTG-22">>
+<</button>>
+
+
 
 </main>
 
 
 :: TGTG-22 {"position":"300,2725","size":"100,100"}
 <<audio ":all" stop>><<audio "round4.3" play>>
-
-<main>
-TIDY!
+<main class ="flex-center-container">
+<h1>TIDY!</h1>
 <div class="countdown">120</div>
 
+<<button ">">><<goto "TGTG-23">><</button>>
+
+<<timed 3s>>
+<<audio ":all" stop>>
+<<if $tidySong is "shiny">>
+	<<audio "shiny" play>>
+<<elseif $tidySong is "hakunaMatata">>
+	<<audio "hakunaMatata" play>>
+<<else>>
+	<<audio "bruno" play>>
+<</if>>
 <<set $seconds to 120>>
+<<silently>>
 	<<repeat 1s>>
 		<<set $seconds to $seconds - 1>>
-		<<if $seconds gt 0>>
+		<<if $seconds gt -1>>
 			<<replace ".countdown">>$seconds<</replace>>
 		<<else>>
+        	<<audio ":all" stop>>
 			<<audio "alarm" play>>
+            Time's up!
             <<timed 5s>><<goto "TGTG-23">><</timed>>
 			<<stop>>
 		<</if>>
 	<</repeat>>
-    
+ <</silently>>
+ <</timed>>   
 </main>
 
 
 :: TGTG-23 {"position":"300,2850","size":"100,100"}
-<<audio ":all" stop>><<audio "round5.1" play>>
-<<audio "titleUnderscore" volume 0.05 fadeout>>
+<<audio ":all" stop>>
+<<audio "titleUnderscore2" fadeout>>
 <main>
-ROUND 5 - MAKE THEM LAUGH
+<<timed 5s>>
+<<audio "round5.1" play>>
+  <div class="flex-rows-align">  
+    <h1>ROUND 5 - MAKE THEM LAUGH</h1>
+  </div>
+<</timed>>
 </main>
 
-<<timed 5s>><<goto "TGTG-24">><</timed>>
+<<timed 10s>><<goto "TGTG-24">><</timed>>
 
 
 :: TGTG-24 {"position":"300,2975","size":"100,100"}
 <<audio ":all" stop>><<audio "round5.2" play>>
-<main>
-Teachers love a good laugh​
-
-At the right time of course​
-
-They like focus too​
-
-But if you can get them at the right moment,​
-
-And make them laugh,​
-
-It is pure joy. ​
-
+<main class = "flex-center-container">
+Teachers love a good laugh
+At the right time of course
+They like focus too
+But if you can get them at the right moment,
+And make them laugh,
+It is pure joy. 
 Now is that moment. 
-
 </main>
 
 <<timed 14s>><<goto "TGTG-25">><</timed>>
@@ -866,13 +784,9 @@ Now is that moment.
 
 :: TGTG-25 {"position":"300,3100","size":"100,100"}
 <<audio ":all" stop>><<audio "round5.3" play>>
-
-<main>
-
+<main class="flex-center-container">
 Teacher, I need you to be in the front of the class looking angry, annoyed or mean! ​
-
 Only the teacher can choose who will speak to them. ​
-
 Students, you have 90 seconds to turn that frown upside down with your best joke
 
 <<button "GO">><<goto "TGTG-26">><</button>>
@@ -883,12 +797,13 @@ Students, you have 90 seconds to turn that frown upside down with your best joke
 :: TGTG-26 {"position":"300,3225","size":"100,100"}
 <<audio ":all" stop>>
 
-<main>
+<main class="flex-center-container">
 <div class="countdown"></div>
 <<button "NEXT">><<goto "TGTG-27">><</button>>
 </main>
 
 <<set $seconds to 90>>
+	<<silently>>
 	<<repeat 1s>>
 		<<set $seconds to $seconds - 1>>
 		<<if $seconds gt 0>>
@@ -900,24 +815,16 @@ Students, you have 90 seconds to turn that frown upside down with your best joke
 			<<stop>>
 		<</if>>
 	<</repeat>>
+    <</silently>>
 
 
 :: TGTG-27 {"position":"300,3350","size":"100,100"}
-<<audio ":all" stop>><<audio "HDYF2" play>>
-<<audio "underscore2" volume 0.05 loop play>>
-
-<main>
-
+<<audio ":all" stop>><<audio "HDYF2" play>><<audio "underscore2" volume 0.05 loop play>><main class="flex-center-container">
 <h1>HOW DO THEY FEEL NOW?</h1>
-
-TEACHER, THE LAST QUESTION IS FOR YOU. ​
-
-HOW ARE YOU RIGHT NOW? ​​
-
-BETWEEN 1-100. ​
-
-100 being the MOST incredible you have ever felt in your life ​
-
+TEACHER, THE LAST QUESTION IS FOR YOU. 
+HOW ARE YOU RIGHT NOW? 
+BETWEEN 1-100. 
+100 being the MOST incredible you have ever felt in your life 
 1 being the LOWEST you have every felt in your life. 
 
 <<button "NEXT">><<goto "TGTG-28">><</button>>
@@ -928,55 +835,49 @@ BETWEEN 1-100. ​
 :: TGTG-28 {"position":"300,3475","size":"100,100"}
 <<audio "HDYF2" stop>><<audio "HDYF3" play>>
 
-<main>
-
+<main class="flex-center-container">
 Did the number go up or down?
 
+<div class="flex-rows-align">
 <<button "UP">><<goto "TGTG-29A">><</button>>
 <<button "DOWN">><<goto "TGTG-29B">><</button>>
+</div>
 </main>
 
 
 :: TGTG-29A {"position":"225,3600","size":"100,100"}
+<<addclass "body" "end">>
 <<audio ":all" stop>><<audio "fanfare" play>>
 <<audio "underscore1" volume 0.05 loop play>>
 
-<main>CONGRATULATIONS!</main>
+<main class="flex-center-container"><h1>CONGRATULATIONS!</h1></main>
 
 <<timed 5s>><<goto TGTG-30>><</timed>>
 
 
 :: TGTG-29B {"position":"375,3600","size":"100,100"}
+<<addclass "body" "end">>
 <<audio ":all" stop>><<audio "underscore1" volume 0.05 loop play>>
-<main>OH NO - BETTER TRY AGAIN!</main>
+<main class="flex-center-container"><h1>OH NO - BETTER TRY AGAIN!</h1></main>
+<<timed 5s>><<goto TGTG-30>><</timed>>
 
 
 :: TGTG-30 {"position":"300,3725","size":"100,100"}
-<<audio "Reward" play>>
-<<audio "underscore1" volume 0.02 loop play>>
-
-<main>
-<h1>REWARD</h1>
-
-Teachers like when you are smiling​
-
-Not just at their jokes​
-
-But when you smile as you are happy. ​
-
-So, we have a game for you to play class. ​
-
-Teacher, this game takes 10 minutes, so you can come play now or come back to it later. ​
-
-It is a drawing game. ​
-
-A game to make you all smile. ​
-
-Thanks for playing our game.​
-
-Congratulations Teacher. ​
-
+<<audio "Reward" play>><<audio "underscore1" volume 0.02 loop play>><main class="flex-rows-align padding">
+<div class="flex-center-container padding">
+<h1>REWARD</h1>Teachers like when you are smiling
+Not just at their jokes
+But when you smile as you are happy. 
+So, we have a game for you to play class. 
+Teacher, this game takes 10 minutes, 
+so you can come play now or come back to it later. 
+It is a drawing game. 
+A game to make you all smile. 
+Thanks for playing our game.
+Congratulations Teacher. 
 You did FAB.
+</div>
+<img class="fold" src="https://www.dropbox.com/s/z20t2key4jl66tx/fold.gif?dl=1">
 
 </main>
 
