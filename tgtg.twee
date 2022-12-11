@@ -7,7 +7,7 @@ The Great Teacher Game
 	"ifid": "18306B07-ADEC-4E25-B97E-EC322318D1F4",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
-	"start": "TGTG-1",
+	"start": "TGTG-5",
 	"zoom": 1
 }
 
@@ -458,17 +458,12 @@ $(document.head).find('#style-ui-bar').remove();
 <<audio "Game3" stop>><<audio "Game4" play>>
 <<audio "underscore2" volume 0.05 loop play>><main><div class = "flex-center-container"><h1>HOW DO YOU FEEL NOW!?</h1><div class="speech padding">
 TEACHER, THE FIRST QUESTION IS FOR YOU.
-
 HOW ARE YOU RIGHT NOW? 
-
 BETWEEN 1-100.
-
 100 being the MOST incredible you have ever felt in your life.
-
 1 being the LOWEST you have every felt in your life.
 
 </div>
-
 <<button "NEXT">><<goto "TGTG-6">><</button>>
 </div>
 
