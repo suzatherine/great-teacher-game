@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="The Great Teacher Game" startnode="1" creator="Twine" creator-version="2.5.1" format="SugarCube" format-version="2.36.1" ifid="18306b07-adec-4e25-b97e-ec322318d1f4" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
+	<tw-storydata name="The Great Teacher Game" startnode="27" creator="Twine" creator-version="2.5.1" format="SugarCube" format-version="2.36.1" ifid="18306b07-adec-4e25-b97e-ec322318d1f4" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Pangolin&display=swap');
 
 /* GENERICS */
@@ -372,7 +372,12 @@ height:80%;
 width:40%;
 }
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">$('#ui-bar').remove();
+.large{
+font-size:8rem;
+}
+#tidy{
+font-size:12rem;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">$('#ui-bar').remove();
 $(document.head).find('#style-ui-bar').remove();
 // TYPEWRITER FN
 !function() {
@@ -518,9 +523,13 @@ $(document.head).find('#style-ui-bar').remove();
 &lt;&lt;timed 11s&gt;&gt;&lt;&lt;goto &quot;TGTG-5&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="TGTG-5" tags="" position="300,600" size="100,100">&lt;&lt;audio &quot;Game3&quot; stop&gt;&gt;&lt;&lt;audio &quot;Game4&quot; play&gt;&gt;
 &lt;&lt;audio &quot;underscore2&quot; volume 0.05 loop play&gt;&gt;&lt;main&gt;&lt;div class = &quot;flex-center-container&quot;&gt;&lt;h1&gt;HOW DO YOU FEEL NOW!?&lt;/h1&gt;&lt;div class=&quot;speech padding&quot;&gt;
 TEACHER, THE FIRST QUESTION IS FOR YOU.
+
 HOW ARE YOU RIGHT NOW? 
+
 BETWEEN 1-100.
+
 100 being the MOST incredible you have ever felt in your life.
+
 1 being the LOWEST you have every felt in your life.
 
 &lt;/div&gt;
@@ -547,7 +556,7 @@ Does the number go up or down?
 
 </tw-passagedata><tw-passagedata pid="8" name="TGTG-7" tags="" position="300,850" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;orange&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;main&gt;
 &lt;img class=&quot;cat&quot; src=&quot;https://www.dropbox.com/s/7sxq02vm25u0kme/cat.png?dl=1&quot;&gt;
-&lt;&lt;audio &quot;titleUnderscore2&quot; volume 1 fadeout&gt;&gt;&lt;&lt;timed 5s&gt;&gt;&lt;&lt;audio &quot;Round1.1&quot; play&gt;&gt;&lt;div class = &quot;flex-center-container&quot;&gt;&lt;h1&gt;ROUND 1 -  TEACHER YOU ARE SO FUNNY&lt;/h1&gt;&lt;/div&gt;
+&lt;&lt;audio &quot;titleUnderscore2&quot;  play&gt;&gt;&lt;&lt;timed 5s&gt;&gt;&lt;&lt;audio &quot;Round1.1&quot; play&gt;&gt;&lt;div class = &quot;flex-center-container&quot;&gt;&lt;h1 class=&quot;large&quot;&gt;ROUND 1 -  TEACHER YOU ARE SO FUNNY&lt;/h1&gt;&lt;/div&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;timed 9s&gt;&gt;&lt;&lt;goto &quot;TGTG-8&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -558,10 +567,8 @@ Does the number go up or down?
 &lt;main class=&quot;flex-center-container speech padding&quot;&gt;
 Do you want to have a try first...? ​
 We&#39;ll do a fake laugh in 3-2-1 
-
-&lt;&lt;timed 12s&gt;&gt;&lt;&lt;goto &quot;TGTG-10&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
-
-&lt;/main&gt;
+&lt;&lt;timed 7s&gt;&gt;&lt;h1 class=&quot;large&quot;&gt;FAKE LAUGH!&lt;/h1&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 12s&gt;&gt;&lt;&lt;goto &quot;TGTG-10&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;/main&gt;
 
 </tw-passagedata><tw-passagedata pid="10" name="TGTG-8" tags="" position="300,975" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;orange&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;Round1.2&quot; play&gt;&gt;
 
@@ -587,11 +594,11 @@ Teacher, if you feel they were believable at laughing at your joke, then click c
 &lt;/main&gt;
 
 </tw-passagedata><tw-passagedata pid="12" name="TGTG-11" tags="" position="300,1350" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
-&lt;&lt;audio &quot;titleUnderscore2&quot; volume 1 fadeout&gt;&gt;
+&lt;&lt;audio &quot;titleUnderscore2&quot; play&gt;&gt;
 &lt;main class=&quot;flex-center-container&quot;&gt;
 &lt;&lt;timed 5s&gt;&gt;
   &lt;&lt;audio &quot;Round2.1&quot; play&gt;&gt;
-  &lt;h1&gt;ROUND 2 - COMPLIMENT BINGO&lt;/h1&gt;
+  &lt;h1 class=&quot;large&quot;&gt;ROUND 2 - COMPLIMENT BINGO&lt;/h1&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 
@@ -617,10 +624,10 @@ Teacher, when you have line shout BINGO and click it too!
 </tw-passagedata><tw-passagedata pid="14" name="TGTG-13" tags="" position="300,1600" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;lightblue&quot;&gt;&gt;
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 &lt;main class=&quot;flex-center-container&quot;&gt;
-&lt;&lt;audio &quot;titleUnderscore2&quot; volume 1 fadeout&gt;&gt;
+&lt;&lt;audio &quot;titleUnderscore2&quot; play&gt;&gt;
 &lt;&lt;timed 5s&gt;&gt;
   &lt;&lt;audio &quot;Round3.1&quot; play&gt;&gt;
- &lt;h1&gt;ROUND 3 - 10 SUCCESSES&lt;/h1&gt;
+ &lt;h1 class= &quot;large&quot;&gt;ROUND 3 - 10 SUCCESSES&lt;/h1&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 
@@ -690,10 +697,10 @@ Did you get 10?
 </tw-passagedata><tw-passagedata pid="20" name="TGTG-19" tags="" position="300,2350" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 
 &lt;main class=&quot;flex-center-container&quot;&gt;
-&lt;&lt;audio &quot;titleUnderscore2&quot; volume 1 fadeout&gt;&gt;
+&lt;&lt;audio &quot;titleUnderscore2&quot; play&gt;&gt;
 &lt;&lt;timed 5s&gt;&gt;
   &lt;&lt;audio &quot;round4&quot; play&gt;&gt;
-  &lt;h1&gt;ROUND 4: DISNEY TIDY TIME&lt;/h1&gt;
+  &lt;h1 class=&quot;large&quot;&gt;ROUND 4: DISNEY TIDY TIME&lt;/h1&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 
@@ -739,11 +746,9 @@ SONG 3:
 
 &lt;/main&gt;</tw-passagedata><tw-passagedata pid="23" name="TGTG-22" tags="" position="300,2725" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;round4.3&quot; play&gt;&gt;
 &lt;main class =&quot;flex-center-container&quot;&gt;
-&lt;h1&gt;TIDY!&lt;/h1&gt;
-&lt;div class=&quot;countdown&quot;&gt;120&lt;/div&gt;
-
-&lt;&lt;button &quot;&gt;&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-23&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
-
+&lt;h1 id=&quot;tidy&quot;&gt;TIDY!&lt;/h1&gt;
+&lt;div class=&quot;large countdown&quot;&gt;120&lt;/div&gt;
+&lt;&lt;timed 30s&gt;&gt;&lt;&lt;button &quot;&gt;&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-23&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 3s&gt;&gt;
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 &lt;&lt;if $tidySong is &quot;shiny&quot;&gt;&gt;
@@ -773,12 +778,12 @@ SONG 3:
 
 
 </tw-passagedata><tw-passagedata pid="24" name="TGTG-23" tags="" position="300,2850" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
-&lt;&lt;audio &quot;titleUnderscore2&quot; volume 1 fadeout&gt;&gt;
+&lt;&lt;audio &quot;titleUnderscore2&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;&lt;timed 5s&gt;&gt;
 &lt;&lt;audio &quot;round5.1&quot; play&gt;&gt;
   &lt;div class=&quot;flex-rows-align&quot;&gt;  
-    &lt;h1&gt;ROUND 5 - MAKE THEM LAUGH&lt;/h1&gt;
+    &lt;h1 class=&quot;large&quot;&gt;ROUND 5 - MAKE THEM LAUGH&lt;/h1&gt;
   &lt;/div&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
@@ -810,7 +815,7 @@ Students, you have 90 seconds to turn that frown upside down with your best joke
 &lt;/main&gt;</tw-passagedata><tw-passagedata pid="27" name="TGTG-26" tags="" position="300,3225" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 
 &lt;main class=&quot;flex-center-container&quot;&gt;
-&lt;div class=&quot;countdown&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;countdown large&quot;&gt;&lt;/div&gt;
 &lt;&lt;button &quot;NEXT&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-27&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
 
@@ -836,9 +841,13 @@ Students, you have 90 seconds to turn that frown upside down with your best joke
 </tw-passagedata><tw-passagedata pid="28" name="TGTG-27" tags="" position="300,3350" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;HDYF2&quot; play&gt;&gt;&lt;&lt;audio &quot;underscore2&quot; volume 0.05 loop play&gt;&gt;&lt;main class=&quot;flex-center-container&quot;&gt;
 &lt;h1&gt;HOW DO YOU FEEL NOW?&lt;/h1&gt;&lt;div class = &quot;speech padding&quot;&gt;
 TEACHER, THE LAST QUESTION IS FOR YOU. 
+
 HOW ARE YOU RIGHT NOW? 
+
 BETWEEN 1-100. 
+
 100 being the MOST incredible you have ever felt in your life 
+
 1 being the LOWEST you have every felt in your life. 
 
 &lt;/div&gt;
@@ -861,16 +870,14 @@ Did the number go up or down?
 
 </tw-passagedata><tw-passagedata pid="30" name="TGTG-29A" tags="" position="225,3600" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;end&quot;&gt;&gt;
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;fanfare&quot; play&gt;&gt;
-&lt;&lt;audio &quot;underscore1&quot; volume 0.05 loop play&gt;&gt;
+&lt;&lt;audio &quot;underscore1&quot; volume 0.1 loop play&gt;&gt;
 
 &lt;main class=&quot;flex-center-container&quot;&gt;&lt;h1&gt;CONGRATULATIONS!&lt;/h1&gt;&lt;/main&gt;
 
 &lt;&lt;timed 5s&gt;&gt;&lt;&lt;goto TGTG-30&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="TGTG-29B" tags="" position="375,3600" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;end&quot;&gt;&gt;
-&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;underscore1&quot; volume 0.05 loop play&gt;&gt;
+&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;underscore1&quot; volume 0.1 loop play&gt;&gt;
 &lt;main class=&quot;flex-center-container&quot;&gt;&lt;h1&gt;OH NO - LET&#39;S TRY ONE MORE!&lt;/h1&gt;&lt;/main&gt;
-&lt;&lt;timed 5s&gt;&gt;&lt;&lt;goto TGTG-30&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="TGTG-30" tags="" position="300,3725" size="100,100">&lt;&lt;audio &quot;Reward&quot; play&gt;&gt;&lt;&lt;audio &quot;underscore1&quot; volume 0.02 loop play&gt;&gt;&lt;main class=&quot;flex-rows-align padding&quot;&gt;
-&lt;div class=&quot;flex-center-container padding speech&quot;&gt;
-&lt;h1&gt;REWARD&lt;/h1&gt;Teachers like when you are smiling
+&lt;&lt;timed 5s&gt;&gt;&lt;&lt;goto TGTG-30&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="TGTG-30" tags="" position="300,3725" size="100,100">&lt;&lt;audio &quot;Reward&quot; play&gt;&gt;&lt;&lt;audio &quot;underscore1&quot; volume 0.02 loop play&gt;&gt;&lt;main class=&quot;flex-center-container&quot;&gt;&lt;div class=&quot;flex-rows-align padding&quot;&gt;&lt;div class=&quot;flex-center-container padding speech&quot;&gt;&lt;h1&gt;REWARD&lt;/h1&gt;Teachers like when you are smiling
 Not just at their jokes
 But when you smile as you are happy. 
 So, we have a game for you to play class. 
@@ -881,10 +888,11 @@ A game to make you all smile.
 Thanks for playing our game.
 Congratulations Teacher. 
 You did FAB.
-
+Class you were FAB too
 &lt;/div&gt;
 &lt;img class=&quot;fold&quot; src=&quot;https://www.dropbox.com/s/z20t2key4jl66tx/fold.gif?dl=1&quot;&gt;
-
+&lt;/div&gt;
+&lt;&lt;button &quot;BACK TO THE START&quot;&gt;&gt;&lt;&lt;goto &quot;TGTG-1&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
 
 

@@ -7,7 +7,7 @@ The Great Teacher Game
 	"ifid": "18306B07-ADEC-4E25-B97E-EC322318D1F4",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
-	"start": "TGTG-1",
+	"start": "TGTG-26",
 	"zoom": 1
 }
 
@@ -287,6 +287,13 @@ height:80%;
 width:40%;
 }
 
+.large{
+font-size:8rem;
+}
+#tidy{
+font-size:12rem;
+}
+
 
 :: Story JavaScript [script]
 $('#ui-bar').remove();
@@ -458,9 +465,13 @@ $(document.head).find('#style-ui-bar').remove();
 <<audio "Game3" stop>><<audio "Game4" play>>
 <<audio "underscore2" volume 0.05 loop play>><main><div class = "flex-center-container"><h1>HOW DO YOU FEEL NOW!?</h1><div class="speech padding">
 TEACHER, THE FIRST QUESTION IS FOR YOU.
+
 HOW ARE YOU RIGHT NOW? 
+
 BETWEEN 1-100.
+
 100 being the MOST incredible you have ever felt in your life.
+
 1 being the LOWEST you have every felt in your life.
 
 </div>
@@ -491,7 +502,7 @@ Does the number go up or down?
 :: TGTG-7 {"position":"300,850","size":"100,100"}
 <<addclass "body" "orange">><<audio ":all" stop>><main>
 <img class="cat" src="https://www.dropbox.com/s/7sxq02vm25u0kme/cat.png?dl=1">
-<<audio "titleUnderscore2" volume 1 fadeout>><<timed 5s>><<audio "Round1.1" play>><div class = "flex-center-container"><h1>ROUND 1 -  TEACHER YOU ARE SO FUNNY</h1></div>
+<<audio "titleUnderscore2"  play>><<timed 5s>><<audio "Round1.1" play>><div class = "flex-center-container"><h1 class="large">ROUND 1 -  TEACHER YOU ARE SO FUNNY</h1></div>
 <</timed>>
 </main>
 <<timed 9s>><<goto "TGTG-8">><</timed>>
@@ -504,10 +515,8 @@ Does the number go up or down?
 <main class="flex-center-container speech padding">
 Do you want to have a try first...? ​
 We'll do a fake laugh in 3-2-1 
-
-<<timed 12s>><<goto "TGTG-10">><</timed>>
-
-</main>
+<<timed 7s>><h1 class="large">FAKE LAUGH!</h1><</timed>>
+<<timed 12s>><<goto "TGTG-10">><</timed>></main>
 
 
 :: TGTG-8 {"position":"300,975","size":"100,100"}
@@ -540,11 +549,11 @@ Teacher, if you feel they were believable at laughing at your joke, then click c
 
 :: TGTG-11 {"position":"300,1350","size":"100,100"}
 <<audio ":all" stop>>
-<<audio "titleUnderscore2" volume 1 fadeout>>
+<<audio "titleUnderscore2" play>>
 <main class="flex-center-container">
 <<timed 5s>>
   <<audio "Round2.1" play>>
-  <h1>ROUND 2 - COMPLIMENT BINGO</h1>
+  <h1 class="large">ROUND 2 - COMPLIMENT BINGO</h1>
 <</timed>>
 </main>
 
@@ -574,10 +583,10 @@ Teacher, when you have line shout BINGO and click it too!
 <<addclass "body" "lightblue">>
 <<audio ":all" stop>>
 <main class="flex-center-container">
-<<audio "titleUnderscore2" volume 1 fadeout>>
+<<audio "titleUnderscore2" play>>
 <<timed 5s>>
   <<audio "Round3.1" play>>
- <h1>ROUND 3 - 10 SUCCESSES</h1>
+ <h1 class= "large">ROUND 3 - 10 SUCCESSES</h1>
 <</timed>>
 </main>
 
@@ -663,10 +672,10 @@ Did you get 10?
 <<audio ":all" stop>>
 
 <main class="flex-center-container">
-<<audio "titleUnderscore2" volume 1 fadeout>>
+<<audio "titleUnderscore2" play>>
 <<timed 5s>>
   <<audio "round4" play>>
-  <h1>ROUND 4: DISNEY TIDY TIME</h1>
+  <h1 class="large">ROUND 4: DISNEY TIDY TIME</h1>
 <</timed>>
 </main>
 
@@ -720,11 +729,9 @@ SONG 3:
 :: TGTG-22 {"position":"300,2725","size":"100,100"}
 <<audio ":all" stop>><<audio "round4.3" play>>
 <main class ="flex-center-container">
-<h1>TIDY!</h1>
-<div class="countdown">120</div>
-
-<<button ">">><<goto "TGTG-23">><</button>>
-
+<h1 id="tidy">TIDY!</h1>
+<div class="large countdown">120</div>
+<<timed 30s>><<button ">">><<goto "TGTG-23">><</button>><</timed>>
 <<timed 3s>>
 <<audio ":all" stop>>
 <<if $tidySong is "shiny">>
@@ -755,12 +762,12 @@ SONG 3:
 
 :: TGTG-23 {"position":"300,2850","size":"100,100"}
 <<audio ":all" stop>>
-<<audio "titleUnderscore2" volume 1 fadeout>>
+<<audio "titleUnderscore2" play>>
 <main>
 <<timed 5s>>
 <<audio "round5.1" play>>
   <div class="flex-rows-align">  
-    <h1>ROUND 5 - MAKE THEM LAUGH</h1>
+    <h1 class="large">ROUND 5 - MAKE THEM LAUGH</h1>
   </div>
 <</timed>>
 </main>
@@ -801,7 +808,7 @@ Students, you have 90 seconds to turn that frown upside down with your best joke
 <<audio ":all" stop>>
 
 <main class="flex-center-container">
-<div class="countdown"></div>
+<div class="countdown large"></div>
 <<button "NEXT">><<goto "TGTG-27">><</button>>
 </main>
 
@@ -825,9 +832,13 @@ Students, you have 90 seconds to turn that frown upside down with your best joke
 <<audio ":all" stop>><<audio "HDYF2" play>><<audio "underscore2" volume 0.05 loop play>><main class="flex-center-container">
 <h1>HOW DO YOU FEEL NOW?</h1><div class = "speech padding">
 TEACHER, THE LAST QUESTION IS FOR YOU. 
+
 HOW ARE YOU RIGHT NOW? 
+
 BETWEEN 1-100. 
+
 100 being the MOST incredible you have ever felt in your life 
+
 1 being the LOWEST you have every felt in your life. 
 
 </div>
@@ -852,7 +863,7 @@ Did the number go up or down?
 :: TGTG-29A {"position":"225,3600","size":"100,100"}
 <<addclass "body" "end">>
 <<audio ":all" stop>><<audio "fanfare" play>>
-<<audio "underscore1" volume 0.05 loop play>>
+<<audio "underscore1" volume 0.1 loop play>>
 
 <main class="flex-center-container"><h1>CONGRATULATIONS!</h1></main>
 
@@ -861,15 +872,13 @@ Did the number go up or down?
 
 :: TGTG-29B {"position":"375,3600","size":"100,100"}
 <<addclass "body" "end">>
-<<audio ":all" stop>><<audio "underscore1" volume 0.05 loop play>>
+<<audio ":all" stop>><<audio "underscore1" volume 0.1 loop play>>
 <main class="flex-center-container"><h1>OH NO - LET'S TRY ONE MORE!</h1></main>
 <<timed 5s>><<goto TGTG-30>><</timed>>
 
 
 :: TGTG-30 {"position":"300,3725","size":"100,100"}
-<<audio "Reward" play>><<audio "underscore1" volume 0.02 loop play>><main class="flex-rows-align padding">
-<div class="flex-center-container padding speech">
-<h1>REWARD</h1>Teachers like when you are smiling
+<<audio "Reward" play>><<audio "underscore1" volume 0.02 loop play>><main class="flex-center-container"><div class="flex-rows-align padding"><div class="flex-center-container padding speech"><h1>REWARD</h1>Teachers like when you are smiling
 Not just at their jokes
 But when you smile as you are happy. 
 So, we have a game for you to play class. 
@@ -880,10 +889,11 @@ A game to make you all smile.
 Thanks for playing our game.
 Congratulations Teacher. 
 You did FAB.
-
+Class you were FAB too
 </div>
 <img class="fold" src="https://www.dropbox.com/s/z20t2key4jl66tx/fold.gif?dl=1">
-
+</div>
+<<button "BACK TO THE START">><<goto "TGTG-1">><</button>>
 </main>
 
 
